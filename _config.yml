@@ -23,15 +23,16 @@ minimal_mistakes_skin    : default # "air", "aqua", "contrast", "dark", "dirt", 
 # in the templates via {{ site.myvariable }}.
 locale: "en-US"
 name: "Huy T. Tran"
-title: "LIRA@illinois"  # the website title (if blank, full name will be used instead)
+# title: "LIRA@illinois"  # the website title (if blank, full name will be used instead)
+title: " "  # the website title (if blank, full name will be used instead)
 title_separator: ""
 subtitle: # site tagline that appears below site title in masthead
-description: "Website for the Tran Research Group"
+description: "Website for LIRA"
 url: "https://tran.aerospace.illinois.edu" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
-repository: tran-research-group/tran-research-group.github.io  # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository: LIRA-illinois/lira-illinois.github.io  # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo: "/assets/images/team/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 search: true
 
 # Site author
@@ -57,7 +58,7 @@ author:
     #   url: "https://twitter.com/huytrtran"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/tran-research-group"
+      url: "https://github.com/LIRA-illinois"
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
@@ -79,7 +80,7 @@ footer:
     #   url: "https://twitter.com/huytrtran"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/tran-research-group"
+      url: "https://github.com/LIRA-illinois"
 
 # Reading files
 include:

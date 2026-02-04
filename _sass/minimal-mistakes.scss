@@ -57,8 +57,8 @@ $muted-emphasis-color: $uiuc-blue-color;
 $light-emphasis-color: mix(#fff, $uiuc-orange-color, 50%);
 $light-muted-emphasis-color: mix(#fff, $uiuc-blue-color, 50%);
 
-// $text-color: $dark-gray !default;
-$text-color: $gray !default;
+// $text-color: $gray !default;
+$text-color: #ee5f5b !default;  // seems to be overwritten or loaded too late
 
 /* Padding */
 $padding-medium: 1em;

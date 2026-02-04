@@ -111,7 +111,7 @@
             {%- endif %}
           {%- endif %}
           {%- if entry.url %}
-          {%- if entry.url contains "arxiv" %}
+            {%- if entry.url contains "arxiv" %}
               <a href="{{ entry.url }}" target="_blank" class="btn btn-sm z-depth-0" role="button">arXiv</a>
             {%- else -%}
               <a href="{{ entry.url }}" target="_blank" class="btn btn-sm z-depth-0" role="button">PDF</a>
