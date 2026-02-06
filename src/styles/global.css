@@ -5,38 +5,47 @@
  */
 
 :root {
+	/* colors */
+	--black: rgb(15, 18, 25);
+	--gray: rgb(96, 115, 159);
+	--gray-light: rgb(229, 233, 240);
+	--gray-dark: rgb(34, 41, 57);
+	--gray-gradient:linear-gradient(rgba(var(--gray-light), 50%), #fff) no-repeat;
+	--il-storm: #707372;
+	--il-storm-light: #9C9A9D;
+	--il-storm-lighter: #C8C6C7;
+
+	/* color variables */
+	--secondary-color: var(--il-storm);
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--background-color: var(--il-storm-95);
+	--body-color: var(--il-storm-10);
+	--heading-color: var(--il-blue);
+	--focus-color: var(--il-altgeld);
+
 	--box-shadow:
 		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px
 		rgba(var(--gray), 33%);
-
-	/* colors */
-	--text-secondary: rgb(var(--gray));
-	--color-primary: #c84113;
 
 	/* fonts */
 	--font-body: var(--il-font-sans);
 	--font-heading: var(--il-font-heading);
 
 	/* sizes */
-	--width-wide: 1400px;
+	--wide-width: 1400px;
+	--small-width: 1000px;
 }
 body {
 	font-family: var(--font-body);
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
+	background: var(--background-color);
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: var(--body-color);
 	font-size: 20px;
 	line-height: 1.7;
 }
@@ -53,27 +62,32 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: var(--heading-color);
 	line-height: 1.2;
 	font-family: var(--font-heading);
 }
 h1 {
+	color: var(--heading-color);
 	font-family: var(--font-heading);
 	font-size: 3.052em;
 }
 h2 {
+	color: var(--heading-color);
 	font-family: var(--font-heading);
 	font-size: 2.441em;
 }
 h3 {
+	color: var(--heading-color);
 	font-family: var(--font-heading);
 	font-size: 1.953em;
 }
 h4 {
+	color: var(--heading-color);
 	font-family: var(--font-heading);
 	font-size: 1.563em;
 }
 h5 {
+	color: var(--heading-color);
 	font-family: var(--font-heading);
 	font-size: 1.25em;
 }
@@ -110,7 +124,7 @@ img {
 }
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+	background-color: var(--gray-light);
 	border-radius: 2px;
 }
 pre {
@@ -129,15 +143,15 @@ blockquote {
 }
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	border-top: 1px solid var(--gray-light);
 }
 @media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
+  body {
+    font-size: 18px;
+  }
+  main {
+    padding: 1em;
+  }
 }
 
 .sr-only {
