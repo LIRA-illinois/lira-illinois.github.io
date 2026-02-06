@@ -1,6 +1,14 @@
 ---
-import HeaderLink from "./HeaderLink.astro"
+const { href } = Astro.props;
 import { SITE_TITLE } from '../consts';
 ---
 
-<HeaderLink href="/">{SITE_TITLE}</HeaderLink>
+<a href="/">{SITE_TITLE}</a>
+<style>
+  a {
+	color: var(--heading-color);
+    font-weight: bolder;
+    padding: 0em 0.5em;
+    text-decoration: none;
+  }
+</style>
