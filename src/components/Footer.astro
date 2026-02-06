@@ -1,42 +1,33 @@
 ---
 import { Icon } from 'astro-icon/components';
+import SocialLink from './SocialLink.astro';
 
 const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Huy T. Tran. All rights reserved.
 	<div class="social-links">
-		<a href="mailto:huytran1@illinois.edu" target="_blank">
-			<span class="sr-only">Email us</span>
-			<Icon name="envelope-solid-full" width="36" height="36" aria-hidden="true" />
-		</a>
-		<a href="https://scholar.google.com/citations?user=TgaPukcAAAAJ&hl=en" target="_blank">
-			<span class="sr-only">Visit our Google Scholar profile</span>
-			<Icon name="google-scholar-brands-solid-full" width="36" height="36" aria-hidden="true" />
-		</a>
-		<a href="https://github.com/lira-illinois" target="_blank">
-			<span class="sr-only">Visit our GitHub repo</span>
-			<Icon name="github-brands-solid-full" width="36" height="36" aria-hidden="true" />
+		<SocialLink href="mailto:huytran1@illinois.edu" srText="Email us" iconName="envelope-solid-full" />
+		<SocialLink href="https://scholar.google.com/citations?user=TgaPukcAAAAJ&hl=en" srText="Visit our Google Scholar profile" iconName="google-scholar-brands-solid-full" />
+		<SocialLink href="https://github.com/lira-illinois" srText="Visit our GitHub repo" iconName="github-brands-solid-full" />
 		</a>
 	</div>
+	&copy; {today.getFullYear()} Huy T. Tran. Powered by <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>.
+    Built from the <a href="https://astro.build/themes/details/blog/" target="_blank" rel="noopener">Astro Blog starter template</a>.
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
 		color: var(--secondary-color);
+		margin: 1em auto;
+		max-width: var(--medium-width);
+		padding: 2em 2em;
 		text-align: center;
+	}
+	footer a {
+      color: var(--secondary-color);
 	}
 	.social-links {
 		display: flex;
 		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		color: var(--secondary-color);
-	}
-	.social-links a:hover {
-		color: var(--focus-color);
 	}
 </style>

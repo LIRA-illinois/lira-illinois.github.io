@@ -1,0 +1,18 @@
+---
+import { Icon } from 'astro-icon/components';
+const { href, srText, iconName } = Astro.props;
+---
+
+<a href={href} target="_blank">
+  <span class="sr-only">{srText}</span>
+  <Icon name={iconName} width="36" height="36" aria-hidden="true" />
+</a>
+<style>
+  a {
+    color: var(--secondary-color);
+    padding: 0em 0.5em;
+  }
+  a:hover {
+    color: var(--focus-color);
+  }
+</style>
