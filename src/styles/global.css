@@ -33,27 +33,24 @@
 	--font-heading: var(--il-font-heading);
 
 	/* sizes */
-	--wide-width: 1400px;
-	--medium-width: 1200px;
+  --largest-width: 1400px;
+	--large-width: 1200px;
+  --medium-width: 900px;
+  --small-width: 820px;
 }
 body {
-	font-family: var(--font-body);
-	margin: 0;
-	padding: 0;
-	text-align: left;
 	background: var(--background-color);
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
+	/* background-size: 100% 600px; */
 	color: var(--body-color);
-	font-size: 20px;
-	line-height: 1.7;
-}
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
+  font-family: var(--font-body);
+  font-size: 20px;
+	line-height: 1.6;
+  margin: 0 auto;
+  max-width: var(--largest-width);
+  overflow-wrap: break-word;
+  padding: 0;
+  text-align: left;
+  word-wrap: break-word;
 }
 h1,
 h2,
@@ -61,10 +58,10 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5rem 0;
 	color: var(--heading-color);
+  font-family: var(--font-heading);
 	line-height: 1.2;
-	font-family: var(--font-heading);
+  margin: 0 0 0.5rem 0;
 }
 h1 {
 	color: var(--heading-color);
