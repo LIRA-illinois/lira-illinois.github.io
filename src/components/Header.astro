@@ -5,7 +5,7 @@ import Nav from "./Nav.astro";
 
 <header>
   <div class="logo">
-	  <Logo/>
+	  <!-- <Logo/> -->
   </div>
   <Nav />
 </header>
@@ -15,14 +15,14 @@ import Nav from "./Nav.astro";
     display: flex;
     margin: 0 auto;
     max-width: var(--large-width);
-    padding: 2em 0em;
+    padding: 0em 0em 2em 0em;
   }
   @media screen and (max-width: 820px) {
     header {
       /* padding: 2em 0; */
     }
-	.logo {
+	  .logo {
       display: none;
-	}
+	  }
   }
 </style>

@@ -38,20 +38,6 @@
   --medium-width: 900px;
   --small-width: 820px;
 }
-body {
-	background: var(--background-color);
-	/* background-size: 100% 600px; */
-	color: var(--body-color);
-  font-family: var(--font-body);
-  font-size: 20px;
-	line-height: 1.6;
-  margin: 0 auto;
-  max-width: var(--largest-width);
-  overflow-wrap: break-word;
-  padding: 0 2em;
-  text-align: left;
-  word-wrap: break-word;
-}
 h1,
 h2,
 h3,
@@ -146,9 +132,6 @@ hr {
   body {
     font-size: 18px;
     padding: 0.5em;
-  }
-  main {
-    /* padding: 1em; */
   }
 }
 
