@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import NewsItem from "./NewsItem.astro";
+const allNews = await getCollection("news");
+---
+
+<div class="news-container">
+  <div class="news-table">
+    {
+      allNews.map((post) => (
+        <NewsItem
+          DATE={post.data.date.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "short",
+          })}
+          DESCRIPTION={post.data.title}
+        />
+      ))
+    }
+  </div>
+</div>
+<style>
+  .news-container {
+    margin: 0 auto;
+    max-width: var(--large-width);
+    padding-top: 1em;
+  }
+  .news-table {
+    display: grid;
+    column-gap: 2em;
+    grid-template-columns: max-content auto;
+    /* padding: 1em 0; */
+    row-gap: 1em;
+  }
+</style>

@@ -2,7 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
@@ -22,7 +22,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 <style>
   body {
     background: var(--background-color);
-    /* background-size: 100% 600px; */
     color: var(--body-color);
     font-family: var(--font-body);
     font-size: 20px;
@@ -33,10 +32,5 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     padding: 2em 2em;
     text-align: left;
     word-wrap: break-word;
-  }
-  main {
-    /* margin: 0 auto; */
-    /* max-width: var(--largest-width); */
-    /* padding: 0 0em; */
   }
 </style>

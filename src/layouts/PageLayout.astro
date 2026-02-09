@@ -1,0 +1,16 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { TITLE } = Astro.props;
+---
+
+<BaseLayout title={TITLE}>
+  <div class="page-container">
+    <slot />
+  </div>
+</BaseLayout>
+<style>
+  .page-container {
+    margin: 0 auto;
+    max-width: var(--small-width);;
+  }
+</style>

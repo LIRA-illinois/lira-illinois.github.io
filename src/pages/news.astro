@@ -1,0 +1,11 @@
+---
+import NewsList from "../components/NewsList.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+
+const pageTitle = "Latest News";
+---
+
+<PageLayout title={pageTitle}>
+  <h1>{pageTitle}</h1>
+  <NewsList />
+</PageLayout>

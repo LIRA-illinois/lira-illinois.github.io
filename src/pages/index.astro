@@ -2,19 +2,21 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import heroImage from "../assets/research/drone.png";
 import HeroSimple from "../components/HeroSimple.astro";
-import News from "../components/News.astro";
+import NewsList from "../components/NewsList.astro";
 
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <HeroSimple
-    title="Lab for Intelligent Robots and Agents"
-    subtitle="Advancing autonomy through interdisciplinary research."
-    heroUrl={heroImage}
-    heroAlt="Drone flight"
-    width={400}
-  />
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} bodyWidth="400px">
+  <div class="hero-container">
+    <HeroSimple
+      title="Lab for Intelligent Robots and Agents"
+      subtitle="Advancing autonomy through interdisciplinary research."
+      heroUrl={heroImage}
+      heroAlt="Drone flight"
+      width={400}
+    />
+  </div>
   <div class="home-description">
     <p>
       Welcome to the <span class="highlight">L</span>ab for
@@ -28,13 +30,24 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     </p>
     <p>Check out our research to learn more!</p>
   </div>
-  <News />
+  <div class="news-container">
+    <h4>Latest news</h4>
+    <NewsList />
+  </div>
 </BaseLayout>
 <style>
+  .hero-container {
+    margin: 0 auto;
+    max-width: var(--large-width);
+  }
   .home-description {
     margin: 0 auto;
     max-width: var(--medium-width);
     text-align: center;
+  }
+  .news-container {
+    margin: 0 auto;
+    max-width: var(--large-width);
   }
   .highlight {
     color: var(--focus-color);

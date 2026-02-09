@@ -1,0 +1,16 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { TITLE } = Astro.props;
+---
+TODO UPDATE
+<BaseLayout title={TITLE}>
+  <div class="post-container">
+    <slot />
+  </div>
+</BaseLayout>
+<style>
+  .post-container {
+    margin: 0 auto;
+    max-width: var(--small-width);;
+  }
+</style>
