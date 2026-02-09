@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
-import { Picture } from "astro:assets";
 import heroImage from "../assets/research/drone.png";
 import HeroSimple from "../components/HeroSimple.astro";
+import News from "../components/News.astro";
+
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -27,6 +28,7 @@ import HeroSimple from "../components/HeroSimple.astro";
     </p>
     <p>Check out our research to learn more!</p>
   </div>
+  <News />
 </BaseLayout>
 <style>
   .home-description {
