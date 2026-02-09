@@ -1,21 +1,37 @@
 ---
 import { getCollection } from "astro:content";
 import NewsItem from "./NewsItem.astro";
-const allNews = await getCollection("news");
+
+let allNews = await getCollection("news");
+allNews = allNews.sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+);
+const { maxItems = 0 } = Astro.props;
+const latestNews = allNews.slice(0, maxItems);
 ---
 
 <div class="news-container">
   <div class="news-table">
     {
-      allNews.map((post) => (
-        <NewsItem
-          DATE={post.data.date.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "short",
-          })}
-          DESCRIPTION={post.data.title}
-        />
-      ))
+      maxItems === 0
+        ? allNews.map((post) => (
+            <NewsItem
+              DATE={post.data.date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+              })}
+              DESCRIPTION={post.data.title}
+            />
+          ))
+        : latestNews.map((post) => (
+            <NewsItem
+              DATE={post.data.date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+              })}
+              DESCRIPTION={post.data.title}
+            />
+          ))
     }
   </div>
 </div>
