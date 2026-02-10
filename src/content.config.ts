@@ -39,7 +39,8 @@ const team = defineCollection({
       email: z.string().email().optional(),
       googleScholar: z.string().optional(),
       github: z.string().optional(),
-      linkedin: z.string().optional(),
+      linkedIn: z.string().optional(),
+      youtube: z.string().optional(),
       cv: z.string().optional(),
   }),
 });

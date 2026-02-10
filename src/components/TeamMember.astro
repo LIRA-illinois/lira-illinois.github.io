@@ -1,6 +1,8 @@
 ---
 import { Picture } from "astro:assets";
 import { render } from "astro:content";
+import SocialLink from "./SocialLink.astro";
+
 const { member } = Astro.props;
 const { Content } = await render(member);
 ---
@@ -9,6 +11,74 @@ const { Content } = await render(member);
   <div class="member-info">
     <h5>{member.data.name}</h5>
     <Content />
+    <div class="social-links">
+      {
+        member.data.website && (
+          <SocialLink
+            href={member.data.website}
+            srText={`Visit ${member.data.name}'s personal website`}
+            iconName="link-solid-full"
+          />
+        )
+      }
+      {
+        member.data.email && (
+          <SocialLink
+            href={`mailto:${member.data.email}`}
+            srText={`Email ${member.data.name}`}
+            iconName="envelope-solid-full"
+          />
+        )
+      }
+      {
+        member.data.googleScholar && (
+          <SocialLink
+            href={member.data.googleScholar}
+            srText={`Visit ${member.data.name}'s Google Scholar profile`}
+            iconName="google-scholar-brands-solid-full"
+          />
+        )
+      }
+      {
+        member.data.github && (
+          <SocialLink
+            href={member.data.github}
+            srText={`Visit ${member.data.name}'s GitHub profile`}
+            iconName="github-brands-solid-full"
+          />
+        )
+      }
+      {
+        member.data.linkedIn && (
+          <SocialLink
+            href={member.data.linkedIn}
+            srText={`Visit ${member.data.name} on LinkedIn`}
+            iconName="linkedin-brands-solid-full"
+          />
+        )
+      }
+      {
+        member.data.youtube && (
+          <SocialLink
+            href={member.data.youtube}
+            srText={`Visit ${member.data.name}'s YouTube channel`}
+            iconName="youtube-brands-solid-full"
+          />
+        )
+      }
+      {
+        member.data.cv && (
+          <SocialLink
+            href={`/../${member.data.cv}`}
+            srText={`Visit ${member.data.name}'s CV`}
+            iconName="file-solid-full"
+          />
+        )
+      }
+      {
+
+      }
+    </div>
   </div>
   {
     member.data.imageUrl && (
@@ -21,6 +91,7 @@ const { Content } = await render(member);
     )
   }
 </div>
+
 <style>
   .member {
     align-items: vertical;
@@ -34,5 +105,9 @@ const { Content } = await render(member);
   }
   .member-info h5 {
     /* font-style: normal; */
+  }
+  .social-links {
+    display: flex;
+    /* justify-content: left; */
   }
 </style>
