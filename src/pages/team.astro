@@ -9,9 +9,6 @@ const pis = await getCollection("team", ({ data }) => {
 const gradMembers = await getCollection("team", ({ data }) => {
   return data.position === "Graduate Student";
 });
-// const gradContent = gradMembers.map((gradMember) => {
-//   return data.position === "Graduate Student";
-// });
 ---
 
 <PageLayout>
@@ -36,18 +33,5 @@ const gradMembers = await getCollection("team", ({ data }) => {
     h3 {
       margin: 0.5em 0em;
     }
-    /* .member {
-      align-items: vertical;
-      display: flex;
-      justify-content: space-between;
-      margin: 0 auto;
-    }
-    .member-info {
-      width: calc(var(--medium-width) - 300px);
-      margin-right: 2em;
-    }
-    .member-info h5 {
-      /* font-style: normal; */
-    } */
   </style>
 </PageLayout>

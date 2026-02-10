@@ -29,8 +29,8 @@
 		rgba(var(--gray), 33%);
 
 	/* fonts */
-	--font-body: var(--il-font-sans);
-	--font-heading: var(--il-font-heading);
+  --font-body: var(--il-font-sans);
+  --font-heading: var(--il-font-heading);
 
 	/* sizes */
   --largest-width: 1400px;
