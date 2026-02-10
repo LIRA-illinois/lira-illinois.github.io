@@ -1,11 +1,14 @@
 ---
 import { Picture } from "astro:assets";
+import { render } from "astro:content";
 const { member } = Astro.props;
+const { Content } = await render(member);
 ---
+
 <div class="member">
   <div class="member-info">
     <h5>{member.data.name}</h5>
-    <p>{member.body}</p>
+    <Content />
   </div>
   <Picture
     src={member.data.imageUrl}

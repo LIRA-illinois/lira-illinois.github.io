@@ -1,7 +1,7 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import TeamMember from "../components/TeamMember.astro";
-import { getCollection, render } from "astro:content";
+import { getCollection } from "astro:content";
 
 const pis = await getCollection("team", ({ data }) => {
   return data.position === "PI";
