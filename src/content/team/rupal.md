@@ -3,7 +3,7 @@ name: "Rupal Nigam"
 position: "Graduate Student"
 dateJoined: 2020-08-16
 dateUpdated: 2026-02-10
-imageUrl: '../../assets/team/huy.jpg'
+imageUrl: '../../assets/team/rupal.jpg'
 imageAlt: "Headshot of Rupal Nigam."
 ---
 

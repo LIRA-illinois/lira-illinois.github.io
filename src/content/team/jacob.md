@@ -3,7 +3,7 @@ name: "Jacob Heglund"
 position: "Graduate Student"
 dateJoined: 2020-08-16
 dateUpdated: 2026-02-10
-imageUrl: '../../assets/team/huy.jpg'
+imageUrl: '../../assets/team/jacob.jpg'
 imageAlt: "Headshot of Jacob Heglund."
 ---
 
