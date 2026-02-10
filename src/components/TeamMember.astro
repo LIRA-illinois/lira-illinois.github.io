@@ -1,0 +1,31 @@
+---
+import { Picture } from "astro:assets";
+const { member } = Astro.props;
+---
+<div class="member">
+  <div class="member-info">
+    <h5>{member.data.name}</h5>
+    <p>{member.body}</p>
+  </div>
+  <Picture
+    src={member.data.imageUrl}
+    alt={member.data.imageAlt}
+    layout="constrained"
+    width={200}
+  />
+</div>
+<style>
+    .member {
+      align-items: vertical;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+    .member-info {
+      width: calc(var(--medium-width) - 300px);
+      margin-right: 2em;
+    }
+    .member-info h5 {
+      /* font-style: normal; */
+    }
+</style>

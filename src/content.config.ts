@@ -23,20 +23,41 @@ const news = defineCollection({
   }),
 });
 
-const blog = defineCollection({
-  // Load Markdown and MDX files in the `src/content/blog/` directory.
-  loader: glob({ base: "./src/content/blog", pattern: "**/*.{md,mdx}" }),
+const team = defineCollection({
+  // Load Markdown and MDX files in the `src/content/team/` directory.
+  loader: glob({ base: "./src/content/team", pattern: "**/*.{md,mdx}" }),
   // Type-check frontmatter using a schema
   schema: ({ image }) =>
     z.object({
-      title: z.string(),
-      description: z.string(),
-      // Transform string to Date object
-      pubDate: z.coerce.date(),
-      updatedDate: z.coerce.date().optional(),
-      heroImage: image().optional(),
-    }),
+      name: z.string(),
+      position: z.string(),
+      dateJoined: z.date(),
+      dateUpdated: z.date().optional(),
+      imageUrl: image().optional(),
+      imageAlt: z.string().optional(),
+      website: z.string().optional(),
+      email: z.string().email().optional(),
+      googleScholar: z.string().optional(),
+      github: z.string().optional(),
+      linkedin: z.string().optional(),
+      cv: z.string().optional(),
+  }),
 });
 
+// const blog = defineCollection({
+//   // Load Markdown and MDX files in the `src/content/blog/` directory.
+//   loader: glob({ base: "./src/content/blog", pattern: "**/*.{md,mdx}" }),
+//   // Type-check frontmatter using a schema
+//   schema: ({ image }) =>
+//     z.object({
+//       title: z.string(),
+//       description: z.string(),
+//       // Transform string to Date object
+//       pubDate: z.coerce.date(),
+//       updatedDate: z.coerce.date().optional(),
+//       heroImage: image().optional(),
+//     }),
+// });
+
 // Export a single `collections` object to register your collection(s)
-export const collections = { blog, news };
+export const collections = { news, team };

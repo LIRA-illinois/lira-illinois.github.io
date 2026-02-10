@@ -1,0 +1,53 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import TeamMember from "../components/TeamMember.astro";
+import { getCollection, render } from "astro:content";
+
+const pis = await getCollection("team", ({ data }) => {
+  return data.position === "PI";
+});
+const gradMembers = await getCollection("team", ({ data }) => {
+  return data.position === "Graduate Student";
+});
+// const gradContent = gradMembers.map((gradMember) => {
+//   return data.position === "Graduate Student";
+// });
+---
+
+<PageLayout>
+  <h3>Principal Investigator</h3>
+  {
+    pis.map((pi) => {
+      return (
+        <TeamMember member={pi}/>
+      );
+    })
+  }
+  <hr />
+  <h3>Graduate Students</h3>
+  {
+    gradMembers.map((gradMember) => {
+      return (
+        <TeamMember member={gradMember}/>
+      );
+    })
+  }
+  <style>
+    h3 {
+      margin: 0.5em 0em;
+    }
+    /* .member {
+      align-items: vertical;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+    .member-info {
+      width: calc(var(--medium-width) - 300px);
+      margin-right: 2em;
+    }
+    .member-info h5 {
+      /* font-style: normal; */
+    } */
+  </style>
+</PageLayout>
