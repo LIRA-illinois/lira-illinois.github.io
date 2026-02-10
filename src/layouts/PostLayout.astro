@@ -1,16 +1,28 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const { TITLE } = Astro.props;
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+const { title, date } = Astro.props;
 ---
-TODO UPDATE
-<BaseLayout title={TITLE}>
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div class="post-container">
+    <h3>{title}</h3>
+    <div class="date-container">
+      <h5>{date}</h5>
+    </div>
     <slot />
   </div>
 </BaseLayout>
 <style>
   .post-container {
     margin: 0 auto;
-    max-width: var(--small-width);;
+    max-width: var(--medium-width);
+  }
+  .date-container {
+    padding: 0.5em 0em 0.5em 0em;
+  }
+  .date-container h5 {
+    color: var(--secondary-color);
+    font-weight: normal;
   }
 </style>

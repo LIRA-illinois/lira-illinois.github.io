@@ -1,10 +1,10 @@
 ---
-const { DATE, DESCRIPTION } = Astro.props;
+const { date, url, description } = Astro.props;
 ---
 
-<div class="date">{DATE}</div>
+<div class="date">{date}</div>
 <div>
-  {DESCRIPTION}
+  <a href={url}>{description}</a>
 </div>
 
 <style>

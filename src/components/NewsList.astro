@@ -16,20 +16,22 @@ const latestNews = allNews.slice(0, maxItems);
       maxItems === 0
         ? allNews.map((post) => (
             <NewsItem
-              DATE={post.data.date.toLocaleDateString("en-US", {
+              date={post.data.date.toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "short",
               })}
-              DESCRIPTION={post.data.title}
+              url={`/news/${post.id}`}
+              description={post.data.title}
             />
           ))
         : latestNews.map((post) => (
             <NewsItem
-              DATE={post.data.date.toLocaleDateString("en-US", {
+              date={post.data.date.toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "short",
               })}
-              DESCRIPTION={post.data.title}
+              url={`/news/${post.id}`}
+              description={post.data.title}
             />
           ))
     }
