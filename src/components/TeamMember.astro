@@ -10,25 +10,29 @@ const { Content } = await render(member);
     <h5>{member.data.name}</h5>
     <Content />
   </div>
-  <Picture
-    src={member.data.imageUrl}
-    alt={member.data.imageAlt}
-    layout="constrained"
-    width={200}
-  />
+  {
+    member.data.imageUrl && (
+      <Picture
+        src={member.data.imageUrl}
+        alt={member.data.imageAlt}
+        layout="constrained"
+        width={200}
+      />
+    )
+  }
 </div>
 <style>
-    .member {
-      align-items: vertical;
-      display: flex;
-      justify-content: space-between;
-      margin: 1em auto;
-    }
-    .member-info {
-      width: calc(var(--medium-width) - 300px);
-      margin-right: 2em;
-    }
-    .member-info h5 {
-      /* font-style: normal; */
-    }
+  .member {
+    align-items: vertical;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em auto;
+  }
+  .member-info {
+    width: calc(var(--medium-width) - 300px);
+    margin-right: 2em;
+  }
+  .member-info h5 {
+    /* font-style: normal; */
+  }
 </style>

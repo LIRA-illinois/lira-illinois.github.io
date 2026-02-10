@@ -3,35 +3,56 @@ import PageLayout from "../layouts/PageLayout.astro";
 import TeamMember from "../components/TeamMember.astro";
 import { getCollection } from "astro:content";
 
-const pis = await getCollection("team", ({ data }) => {
+let pis = await getCollection("team", ({ data }) => {
   return data.position === "PI";
 });
-const gradMembers = await getCollection("team", ({ data }) => {
+pis = pis.sort(
+  (b, a) =>
+    new Date(b.data.dateJoined).valueOf() -
+    new Date(a.data.dateJoined).valueOf(),
+);
+let grads = await getCollection("team", ({ data }) => {
   return data.position === "Graduate Student";
 });
+grads = grads.sort(
+  (b, a) =>
+    new Date(b.data.dateJoined).valueOf() -
+    new Date(a.data.dateJoined).valueOf(),
+);
+let alumnus = await getCollection("team", ({ data }) => {
+  return data.position === "Alumnus";
+});
+alumnus = alumnus.sort(
+  (b, a) =>
+    new Date(b.data.dateJoined).valueOf() -
+    new Date(a.data.dateJoined).valueOf(),
+);
 ---
 
 <PageLayout>
   <h3>Principal Investigator</h3>
   {
     pis.map((pi) => {
-      return (
-        <TeamMember member={pi}/>
-      );
+      return <TeamMember member={pi} />;
     })
   }
   <hr />
   <h3>Graduate Students</h3>
   {
-    gradMembers.map((gradMember) => {
-      return (
-        <TeamMember member={gradMember}/>
-      );
+    grads.map((grad) => {
+      return <TeamMember member={grad} />;
     })
   }
-  <style>
-    h3 {
-      margin: 0.5em 0em;
-    }
-  </style>
+  <hr />
+  <h3>Alumnus</h3>
+  {
+    alumnus.map((alumni) => {
+      return <TeamMember member={alumni} />;
+    })
+  }
 </PageLayout>
+<style>
+  h3 {
+    margin: 0.5em 0em 1em 0em;
+  }
+</style>
