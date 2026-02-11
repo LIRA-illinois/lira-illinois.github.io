@@ -19,10 +19,10 @@ grads = grads.sort(
     new Date(b.data.dateJoined).valueOf() -
     new Date(a.data.dateJoined).valueOf(),
 );
-let alumnus = await getCollection("team", ({ data }) => {
+let alumni = await getCollection("team", ({ data }) => {
   return data.position === "Alumnus";
 });
-alumnus = alumnus.sort(
+alumni = alumni.sort(
   (b, a) =>
     new Date(b.data.dateJoined).valueOf() -
     new Date(a.data.dateJoined).valueOf(),
@@ -44,10 +44,10 @@ alumnus = alumnus.sort(
     })
   }
   <hr />
-  <h3>Alumnus</h3>
+  <h3>Alumni</h3>
   {
-    alumnus.map((alumni) => {
-      return <TeamMember member={alumni} />;
+    alumni.map((alumnus) => {
+      return <TeamMember member={alumnus} />;
     })
   }
 </PageLayout>
