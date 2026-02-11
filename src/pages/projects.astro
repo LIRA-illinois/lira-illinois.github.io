@@ -11,11 +11,12 @@ pis = pis.sort(
     new Date(b.data.dateJoined).valueOf() -
     new Date(a.data.dateJoined).valueOf(),
 );
+const fundingSlugs = ["arl.jpeg", "cerl.webp", "darpa.png", "isee.png", "mitre.png", "nasa.jpg", "onr.png", "zjui.png"];
 ---
 
 <PageLayout>
   <h3>Projects</h3>
   <p>Here are some of our current and past projects.</p>
   <hr />
-  <Funding fundingSource="cerl"/>
+  <Funding fundingSlugs={fundingSlugs} />
 </PageLayout>

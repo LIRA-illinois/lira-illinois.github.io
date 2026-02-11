@@ -1,23 +1,27 @@
 ---
-import { Picture } from "astro:assets";
-const { fundingSource } = Astro.props;
+import FundingImage from './FundingImage.astro';
+interface Props {
+  fundingSlugs: string[];
+}
+const { fundingSlugs } = Astro.props;
 ---
 
 <p>We gratefully acknowledge our current and past funding sources.</p>
 <div class="funding-images">
-  <Picture
-    src=`/images/funding/${fundingSource}.jpg`
-    alt="Logo for CERL"
-    layout ="constrained"
-    width={200}
-    height={100}
-  />
+  {
+    fundingSlugs.map((fundingSlug) => {
+      return (
+        <FundingImage url={`/src/assets/funding/${fundingSlug}`} alt={fundingSlug.toUpperCase()} height="75"/>
+      );
+    })
+  }
 </div>
 <style>
   .funding-images {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center;
+    gap: 2em;
+    justify-content: space-between;
     margin-top: 1em;
   }
+</style>
