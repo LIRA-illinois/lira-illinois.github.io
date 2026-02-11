@@ -1,0 +1,23 @@
+---
+import { Picture } from "astro:assets";
+const { fundingSource } = Astro.props;
+---
+
+<p>We gratefully acknowledge our current and past funding sources.</p>
+<div class="funding-images">
+  <Picture
+    src=`/images/funding/${fundingSource}.jpg`
+    alt="Logo for CERL"
+    layout ="constrained"
+    width={200}
+    height={100}
+  />
+</div>
+<style>
+  .funding-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+  }

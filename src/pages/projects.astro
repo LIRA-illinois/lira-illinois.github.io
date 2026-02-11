@@ -1,0 +1,21 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Funding from "../components/Funding.astro";
+import { getCollection } from "astro:content";
+
+let pis = await getCollection("team", ({ data }) => {
+  return data.position === "PI";
+});
+pis = pis.sort(
+  (b, a) =>
+    new Date(b.data.dateJoined).valueOf() -
+    new Date(a.data.dateJoined).valueOf(),
+);
+---
+
+<PageLayout>
+  <h3>Projects</h3>
+  <p>Here are some of our current and past projects.</p>
+  <hr />
+  <Funding fundingSource="cerl"/>
+</PageLayout>
