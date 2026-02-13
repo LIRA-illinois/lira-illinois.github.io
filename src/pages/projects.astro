@@ -1,22 +1,39 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import ProjectCards from "../components/ProjectCards.astro";
 import Funding from "../components/Funding.astro";
 import { getCollection } from "astro:content";
 
-let pis = await getCollection("team", ({ data }) => {
-  return data.position === "PI";
-});
-pis = pis.sort(
-  (b, a) =>
-    new Date(b.data.dateJoined).valueOf() -
-    new Date(a.data.dateJoined).valueOf(),
-);
-const fundingSlugs = ["arl.jpeg", "cerl.webp", "darpa.png", "isee.png", "mitre.png", "nasa.jpg", "onr.png", "zjui.png"];
+// let pis = await getCollection("team", ({ data }) => {
+//   return data.position === "PI";
+// });
+// pis = pis.sort(
+//   (b, a) =>
+//     new Date(b.data.dateJoined).valueOf() -
+//     new Date(a.data.dateJoined).valueOf(),
+// );
+const projectSlugs = [
+  "aht.png",
+  "cams.jpeg"
+];
+const fundingSlugs = [
+  "arl.jpeg",
+  "cerl.webp",
+  "darpa.png",
+  "isee.png",
+  "mitre.png",
+  "nasa.jpg",
+  "onr.png",
+  "zjui.png",
+];
 ---
 
 <PageLayout>
-  <h3>Projects</h3>
-  <p>Here are some of our current and past projects.</p>
+  <h3>Current Projects</h3>
+  <ProjectCards projectSlugs={projectSlugs} />  
   <hr />
+  <h3>Past Projects</h3>
+  <hr />
+  <h3>Funding</h3>
   <Funding fundingSlugs={fundingSlugs} />
 </PageLayout>

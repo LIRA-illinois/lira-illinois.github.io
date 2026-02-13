@@ -1,0 +1,38 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  projectTitle: string;
+  projectSubtitle: string;
+  imageUrl: string;
+  imageAlt: string;
+  imageHeight: number;
+}
+
+const { projectTitle, projectSubtitle, imageUrl, imageAlt, imageHeight } =
+  Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/research/*.{jpeg,jpg,png,gif,webp}",
+);
+if (!images[imageUrl])
+  throw new Error(
+    `"${imageUrl}" does not exist in glob: "/src/assets/research/*.{jpeg,jpg,png,gif}"`,
+  );
+---
+
+<div class="project-card">
+  <Image src={images[imageUrl]()} alt={imageAlt} height={imageHeight} />
+  <h5>{projectTitle}</h5>
+  <p>{projectSubtitle}</p>
+</div>
+<style>
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    width: 100%;
+    max-width: 300px;
+  }
+</style>

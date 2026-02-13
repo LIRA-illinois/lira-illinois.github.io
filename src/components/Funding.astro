@@ -11,7 +11,7 @@ const { fundingSlugs } = Astro.props;
   {
     fundingSlugs.map((fundingSlug) => {
       return (
-        <FundingImage url={`/src/assets/funding/${fundingSlug}`} alt={fundingSlug.toUpperCase()} height="75"/>
+        <FundingImage url={`/src/assets/funding/${fundingSlug}`} alt={fundingSlug.toUpperCase()} height={75} />
       );
     })
   }
