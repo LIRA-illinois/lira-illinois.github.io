@@ -52,27 +52,35 @@ h6 {
 h1 {
 	color: var(--heading-color);
 	font-family: var(--font-heading);
-	font-size: 3.052em;
+	/* font-size: 3.052em; */
+  font-size: 2.55em;
 }
 h2 {
 	color: var(--heading-color);
 	font-family: var(--font-heading);
-	font-size: 2.441em;
+	/* font-size: 2.441em; */
+  font-size: 2.3em;
 }
 h3 {
 	color: var(--heading-color);
 	font-family: var(--font-heading);
-	font-size: 1.953em;
+	/* font-size: 1.953em; */
+  font-size: 2em;
 }
 h4 {
 	color: var(--heading-color);
 	font-family: var(--font-heading);
-	font-size: 1.563em;
+	/* font-size: 1.563em; */
+  font-size: 1.6em;
 }
 h5 {
 	color: var(--heading-color);
 	font-family: var(--font-heading);
-	font-size: 1.25em;
+	/* font-size: 1.25em; */
+  font-size: 1.5em;
+}
+h6 {
+  font-size: 1.4em;
 }
 strong,
 b {
