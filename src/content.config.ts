@@ -23,6 +23,22 @@ const news = defineCollection({
   }),
 });
 
+const projects = defineCollection({
+  // Load Markdown and MDX files in the `src/content/projects/` directory.
+  loader: glob({ base: "./src/content/projects", pattern: "**/*.{md,mdx}" }),
+  // Type-check frontmatter using a schema
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    date: z.date(),
+    dateUpdated: z.date().optional(),
+    imageUrl: z.string(),
+    imageAlt: z.string(),
+    past: z.boolean().optional(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
 const team = defineCollection({
   // Load Markdown and MDX files in the `src/content/team/` directory.
   loader: glob({ base: "./src/content/team", pattern: "**/*.{md,mdx}" }),
@@ -61,4 +77,4 @@ const team = defineCollection({
 // });
 
 // Export a single `collections` object to register your collection(s)
-export const collections = { news, team };
+export const collections = { news, projects, team };

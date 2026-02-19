@@ -1,21 +1,15 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
-import ProjectCards from "../components/ProjectCards.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 import Funding from "../components/Funding.astro";
 import { getCollection } from "astro:content";
 
-// let pis = await getCollection("team", ({ data }) => {
-//   return data.position === "PI";
-// });
-// pis = pis.sort(
-//   (b, a) =>
-//     new Date(b.data.dateJoined).valueOf() -
-//     new Date(a.data.dateJoined).valueOf(),
-// );
-const projectSlugs = [
-  "aht.png",
-  "cams.jpeg"
-];
+let allProjects = await getCollection("projects");
+allProjects = allProjects.sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+);
+const currentProjects = allProjects.filter((project) => !project.data.past);
+const pastProjects = allProjects.filter((project) => project.data.past);
 const fundingSlugs = [
   "arl.jpeg",
   "cerl.webp",
@@ -30,10 +24,47 @@ const fundingSlugs = [
 
 <PageLayout>
   <h3>Current Projects</h3>
-  <ProjectCards projectSlugs={projectSlugs} />  
+  <div class="project-cards">
+    {
+      currentProjects.map((project) => {
+        return (
+          <ProjectCard
+            projectTitle={project.data.title}
+            projectSubtitle={project.data.subtitle}
+            url={`/projects/${project.id}`}
+            imageUrl={project.data.imageUrl}
+            imageAlt={project.data.imageAlt}
+          />
+        );
+      })
+    }
+  </div>
   <hr />
   <h3>Past Projects</h3>
+  <div class="project-cards">
+    {
+      pastProjects.map((project) => {
+        return (
+          <ProjectCard
+            projectTitle={project.data.title}
+            projectSubtitle={project.data.subtitle}
+            url={`/projects/${project.id}`}
+            imageUrl={project.data.imageUrl}
+            imageAlt={project.data.imageAlt}
+          />
+        );
+      })
+    }
+  </div>
   <hr />
   <h3>Funding</h3>
   <Funding fundingSlugs={fundingSlugs} />
 </PageLayout>
+<style>
+  .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+</style>
