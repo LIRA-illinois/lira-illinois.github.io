@@ -6,7 +6,6 @@ interface Props {
 const { fundingSlugs } = Astro.props;
 ---
 
-<p>We gratefully acknowledge our current and past funding sources.</p>
 <div class="funding-images">
   {
     fundingSlugs.map((fundingSlug) => {
@@ -21,7 +20,7 @@ const { fundingSlugs } = Astro.props;
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 1em;
   }
 </style>

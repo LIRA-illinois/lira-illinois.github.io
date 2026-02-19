@@ -5,11 +5,13 @@ date: 2023-09-01
 dateUpdated: 2026-02-17
 imageUrl: '/src/assets/research/hrl.png'
 imageAlt: "A hierarchical decision policy."
+funding: "DARPA FA8750-18C-0137 and ONR N00014-20-1-2249"
+fundingSlugs: ["darpa.png", "onr.png"]
 ---
 
 We work on hierarchical reinforcement learning (HRL) methods to create autonomous agents that can efficiently solve complex tasks.
 
-This work was funded in part by DARPA FA8750-18C-0137 and ONR N00014-20-1-2249.
+<!-- This work was funded in part by DARPA FA8750-18C-0137 and ONR N00014-20-1-2249. -->
 
 <div class="funding-logos">
     <a href="https://www.darpa.mil/"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/funding/darpa.png"></a>

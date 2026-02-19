@@ -5,15 +5,11 @@ date: 2022-08-16
 dateUpdated: 2024-09-20
 imageUrl: '/src/assets/research/aht.png'
 imageAlt: "A robot adapting to two new robot teammates."
+funding: "ONR N00014-20-1-2249"
+fundingSlugs: ["onr.png"]
 ---
 
 We work on algorithms for robots to adapt to new teammates in ad hoc multi-robot teams.
-
-This work was funded in part by ONR N00014-20-1-2249.
-
-<!-- <div class="funding-logos">
-    <a href="https://www.onr.navy.mil/"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/funding/onr.png"></a>
-</div> -->
 
 ## Generalized policy improvement for coordination in ad hoc teams
 
@@ -27,3 +23,5 @@ This work proposes a method, **generalized policy improvement with successor fea
 <!-- <div class="row">
     <a href="https://djhanove.github.io/IROS23_MRS/assets/papers/IROS_MRS_2023_AdhocTeams.pdf" class="button_general">PDF</a>
 </div> -->
+
+<!-- This work was funded in part by ONR N00014-20-1-2249. -->

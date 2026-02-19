@@ -1,19 +1,24 @@
 ---
-import { getCollection, render } from 'astro:content';
-import PostLayout from '../../layouts/PostLayout.astro';
+import { getCollection, render } from "astro:content";
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import Funding from "../../components/Funding.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection('projects');
+  const posts = await getCollection("projects");
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },
   }));
 }
-
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<PostLayout title={post.data.title} date={post.data.date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}>
+<ProjectLayout {...post.data}>
   <Content />
-</PostLayout>
+  <hr />
+  {post.data.funding && 
+  <h5>Funding</h5>
+  <p>This work was funded in part by {post.data.funding}.</p>
+  <Funding fundingSlugs={post.data.fundingSlugs || []} />}
+</ProjectLayout>

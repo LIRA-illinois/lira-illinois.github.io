@@ -1,15 +1,17 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-const { title, date } = Astro.props;
+import { Image } from "astro:assets";
+const { title, subtitle, date, imageUrl } = Astro.props;
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div class="post-container">
-    <h3>{title}</h3>
-    <div class="date-container">
-      <h5>{date}</h5>
-    </div>
+    <h1>{title}</h1>
+    <h6>{subtitle}</h6>
+    <h6>{date}</h6>
+    <!-- <Image src={imageUrl} alt={title} /> -->
+    <hr />
     <slot />
   </div>
 </BaseLayout>
@@ -21,8 +23,9 @@ const { title, date } = Astro.props;
   .date-container {
     padding: 0.5em 0em 0.5em 0em;
   }
-  .date-container h5 {
+  .post-container h6 {
     color: var(--secondary-color);
     font-weight: normal;
+    margin-top: 0.5em;
   }
 </style>

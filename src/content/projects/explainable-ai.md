@@ -5,11 +5,13 @@ date: 2023-09-01
 dateUpdated: 2026-02-17
 imageUrl: '/src/assets/research/ltl.png'
 imageAlt: "A robot explaining why it made a decision using language."
+funding: "ONR N00014-20-1-2249"
+fundingSlugs: ["onr.png"]
 ---
 
 We work on methods to interpret or explain autonomous agents, with a focus on those that use artificial intelligence-based decision making policies.
 
-This work was funded in part by ONR N00014-20-1-2249.
+<!-- This work was funded in part by ONR N00014-20-1-2249. -->
 
 <div class="funding-logos">
     <a href="https://www.onr.navy.mil/"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/funding/onr.png"></a>

@@ -5,12 +5,14 @@ date: 2023-09-01
 dateUpdated: 2026-02-17
 imageUrl: '/src/assets/research/WayFAST2.jpg'
 imageAlt: "A robot navigating through outdoor terrain."
+funding: "ARL W911NF2020184, the MITRE Corporation research agreement 126392, and ONR N00014-20-1-2249"
+fundingSlugs: ["arl.jpeg", "mitre.png", "onr.png"]
 past: True
 ---
 
 We work on methods for autonomous robot navigation and perception in unstructured and uncertain environments, like outdoor areas.
 
-This work was funded in part by Army W9132T-19-C-0006, the MITRE Corporation research agreement 126392, and ONR N00014-20-1-2249.
+<!-- This work was funded in part by Army W9132T-19-C-0006, the MITRE Corporation research agreement 126392, and ONR N00014-20-1-2249. -->
 
 <div class="funding-logos">
     <a href="https://www.erdc.usace.army.mil/Locations/CERL/"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/funding/cerl.webp"></a>

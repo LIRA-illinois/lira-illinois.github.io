@@ -5,6 +5,8 @@ date: 2020-08-16
 dateUpdated: 2024-09-20
 imageUrl: '/src/assets/research/dissc.png'
 imageAlt: "Using MARL to control 27 agents in Starcraft II."
+funding: "ARL W911NF2020184, NASA 80NSSC23M0221, and ONR N00014-20-1-2249"
+fundingSlugs: ["arl.jpeg", "nasa.jpg", "onr.png"]
 ---
 
 We work on multi-agent reinforcement learning (MARL) algorithms for coordinating agents in cooperative tasks, such as search-and-rescue, surveillance missions, and warehouse robotics.
