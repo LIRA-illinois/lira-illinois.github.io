@@ -6,7 +6,9 @@ const { title, subtitle, heroUrl, heroAlt, heroWidth } = Astro.props;
 <div class="hero-container">
   <div class="hero-text">
     <h1>{title}</h1>
-    {subtitle && <h4>{subtitle}</h4>}
+    <div class="hero-subtitle">
+      {subtitle && <h4>{subtitle}</h4>}
+    </div>
   </div>
   <div class="hero-image">
     <Picture src={heroUrl} alt={heroAlt} layout="constrained" width={400} />
@@ -20,14 +22,10 @@ const { title, subtitle, heroUrl, heroAlt, heroWidth } = Astro.props;
     text-align: left;
   }
   .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     padding-right: 2em;
-  }
-  .hero-text h4 {
-    padding: 1em 0em;
-  }
-  .hero-image {
-    /* display: flex; */
-    /* justify-content: center; */
   }
   @media (max-width: 820px) {
     .hero-container {
