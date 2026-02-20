@@ -1,15 +1,8 @@
 ---
 title: "We are awarded funding from DARPA!"
 date: 2018-08-29
-last_modified_at: 2020-05-12
-categories:
-  - news
-tags:
-  - artificial intelligence
-  - multi-agent systems
-  - reinforcement learning
-  - robotics
-# last_modified_at: 2016-03-09T16:20:02-05:00
+dateUpdated: 2020-05-12
+tags: ["artificial intelligence", "multi-agent systems", "reinforcement learning", "robotics"]
 ---
 
 Our project titled "A Demonstration Platform for Dynamic Mission Planning with Multi-domain Autonomous Systems" is selected for funding by the DARPA STO program! Our project aims to develop a demonstration platform for teams of quad-rotors and ground-based robots competing in games of capture-the-flag, along with hierarchical reinforcement learning (RL) methods for teams of agents to win these games.

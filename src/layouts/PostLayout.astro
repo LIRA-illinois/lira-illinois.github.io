@@ -1,31 +1,27 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import Funding from "../components/Funding.astro";
+import PostHeader from "../components/PostHeader.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { Image } from "astro:assets";
-const { title, subtitle, date, imageUrl } = Astro.props;
+
+const { title, subtitle, date, dateUpdated, imageUrl, imageAlt, funding, fundingSlugs } = Astro.props;
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div class="post-container">
-    <h1>{title}</h1>
-    <h6>{subtitle}</h6>
-    <h6>{date}</h6>
-    <!-- <Image src={imageUrl} alt={title} /> -->
-    <hr />
+    <PostHeader title={title} subtitle={subtitle} date={date} dateUpdated={dateUpdated} imageUrl={imageUrl} imageAlt={imageAlt} />
     <slot />
+    {funding && 
+      <hr />
+      <h2>Funding</h2>
+      <p>This work was funded in part by {funding}.</p>
+      <Funding fundingSlugs={fundingSlugs || []} />
+    }
   </div>
 </BaseLayout>
 <style>
   .post-container {
     margin: 0 auto;
     max-width: var(--medium-width);
-  }
-  .date-container {
-    padding: 0.5em 0em 0.5em 0em;
-  }
-  .post-container h6 {
-    color: var(--secondary-color);
-    font-weight: normal;
-    margin-top: 0.5em;
   }
 </style>

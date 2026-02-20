@@ -3,9 +3,9 @@ import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
 interface Props {
+  url: string;
   projectTitle: string;
   projectSubtitle: string;
-  url: string;
   imageUrl: string;
   imageAlt: string;
 }
@@ -16,7 +16,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 if (!images[imageUrl])
   throw new Error(
-    `"${imageUrl}" does not exist in glob: "/src/assets/research/*.{jpeg,jpg,png,gif}"`,
+    `"${imageUrl}" does not exist in glob: "/src/assets/research/*.{jpeg,jpg,png,gif,webp}"`,
   );
 ---
 

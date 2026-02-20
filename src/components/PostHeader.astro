@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+
+const { title, subtitle, date, dateUpdated, imageUrl, imageAlt } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/research/*.{jpeg,jpg,png,gif,webp}",
+);
+if (imageUrl && !images[imageUrl])
+  throw new Error(
+    `"${imageUrl}" does not exist in glob: "/src/assets/research/*.{jpeg,jpg,png,gif,webp}"`,
+  );
+---
+
+<div class="header-container">
+  {
+    imageUrl && (
+      <div class="image-container">
+        <Image src={images[imageUrl]()} alt={imageAlt} />
+      </div>
+    )
+  }
+  <h1>{title}</h1>
+  <div class="caption-container">
+    {subtitle && <h4>{subtitle}</h4>}
+    {
+      date && !dateUpdated && (
+        <h5>
+          {date &&
+            date.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+        </h5>
+      )
+    }
+    {
+      dateUpdated && (
+        <h5>
+          Last updated:
+          {dateUpdated &&
+            dateUpdated.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+        </h5>
+      )
+    }
+    <hr />
+  </div>
+</div>
+<style>
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em 0em;
+  }
+  .caption-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em 0em;
+  }
+  .caption-container * {
+    color: var(--secondary-color);
+    font-weight: normal;
+  }
+  .image-container {
+    margin-bottom: 1em;
+  }
+</style>

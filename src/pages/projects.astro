@@ -4,10 +4,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 import Funding from "../components/Funding.astro";
 import { getCollection } from "astro:content";
 
-let allProjects = await getCollection("projects");
-allProjects = allProjects.sort(
-  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
-);
+const allProjects = await getCollection("projects");
 const currentProjects = allProjects.filter((project) => !project.data.past);
 const pastProjects = allProjects.filter((project) => project.data.past);
 const fundingSlugs = [
@@ -29,9 +26,9 @@ const fundingSlugs = [
       currentProjects.map((project) => {
         return (
           <ProjectCard
+            url={`/projects/${project.id}`}
             projectTitle={project.data.title}
             projectSubtitle={project.data.subtitle}
-            url={`/projects/${project.id}`}
             imageUrl={project.data.imageUrl}
             imageAlt={project.data.imageAlt}
           />

@@ -1,5 +1,5 @@
 ---
-import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import PostLayout from "../../layouts/PostLayout.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -13,6 +13,6 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<ProjectLayout {...post.data}>
+<PostLayout {...post.data}>
   <Content />
-</ProjectLayout>
+</PostLayout>

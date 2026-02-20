@@ -11,14 +11,14 @@ const news = defineCollection({
   // Type-check frontmatter using a schema
   schema: z.object({
     title: z.string(),
-    date: z.date(),
-    updatedDate: z.date().optional(),
-    description: z.string().optional(),
-    author: z.string().optional(),
-    image: z.object({
-      url: z.string(),
-      alt: z.string(),
-    }).optional(),
+    subtitle: z.string().optional(),
+    date: z.date().optional(),
+    dateUpdated: z.date().optional(),
+    imageUrl: z.string().optional(),
+    imageAlt: z.string().optional(),
+    past: z.boolean().optional(),
+    funding: z.string().optional(),
+    fundingSlugs: z.array(z.string()).optional(),
     tags: z.array(z.string()).optional(),
   }),
 });
@@ -30,10 +30,10 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),
-    date: z.date(),
-    dateUpdated: z.date().optional(),
     imageUrl: z.string(),
     imageAlt: z.string(),
+    date: z.date().optional(),
+    dateUpdated: z.date().optional(),
     past: z.boolean().optional(),
     funding: z.string().optional(),
     fundingSlugs: z.array(z.string()).optional(),
