@@ -60,3 +60,8 @@ Check out [our documentation](https://docs.astro.build) or jump into our [Discor
 ## Credit
 
 This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+
+## Useful references
+
+- How to define [modular type scales](https://blog.prototypr.io/defining-a-modular-type-scale-for-web-ui-51acd5df31aa)
+- How to test [type scales](https://typescale.com/?source=post_page-----51acd5df31aa---------------------------------------)
