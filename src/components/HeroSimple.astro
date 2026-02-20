@@ -6,7 +6,7 @@ const { title, subtitle, heroUrl, heroAlt, heroWidth } = Astro.props;
 <div class="hero-container">
   <div class="hero-text">
     <h1>{title}</h1>
-    {subtitle && <h5>{subtitle}</h5>}
+    {subtitle && <h4>{subtitle}</h4>}
   </div>
   <div class="hero-image">
     <Picture src={heroUrl} alt={heroAlt} layout="constrained" width={400} />
@@ -22,7 +22,7 @@ const { title, subtitle, heroUrl, heroAlt, heroWidth } = Astro.props;
   .hero-text {
     padding-right: 2em;
   }
-  .hero-text h5 {
+  .hero-text h4 {
     padding: 1em 0em;
   }
   .hero-image {

@@ -17,8 +17,8 @@
 
 	/* color variables */
 	--secondary-color: var(--il-storm);
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
+	/* --accent: #2337ff;
+	--accent-dark: #000d8a; */
 	--background-color: var(--il-storm-95);
 	--body-color: var(--il-storm-10);
 	--heading-color: var(--il-blue);
@@ -50,38 +50,48 @@ h6 {
   margin: 0 0 0.5rem 0;
 }
 h1 {
+  /* titles */
 	color: var(--heading-color);
 	font-family: var(--font-heading);
 	/* font-size: 3.052em; */
-  font-size: 2.55em;
+  font-size: 2.986rem;
 }
 h2 {
+  /* section headings */
 	color: var(--heading-color);
 	font-family: var(--font-heading);
 	/* font-size: 2.441em; */
-  font-size: 2.3em;
+  font-size: 2.488rem;
 }
 h3 {
+  /* subsection headings */
 	color: var(--heading-color);
 	font-family: var(--font-heading);
 	/* font-size: 1.953em; */
-  font-size: 2em;
+  font-size: 2.074rem;
 }
 h4 {
+  /* subtitles */
 	color: var(--heading-color);
 	font-family: var(--font-heading);
 	/* font-size: 1.563em; */
-  font-size: 1.6em;
+  font-size: 1.728rem;
 }
 h5 {
+  /* captions */
 	color: var(--heading-color);
 	font-family: var(--font-heading);
 	/* font-size: 1.25em; */
-  font-size: 1.5em;
+  font-size: 1.44rem;
 }
 h6 {
-  font-size: 1.4em;
+  font-size: 1.2rem;
 }
+p {
+  font-size: 20px;
+  margin-bottom: 1em;
+}
+
 strong,
 b {
 	font-weight: 700;
@@ -92,9 +102,6 @@ a {
 }
 a:hover {
 	color: var(--focus-color);
-}
-p {
-	margin-bottom: 1em;
 }
 .prose p {
 	margin-bottom: 2em;
@@ -143,6 +150,11 @@ hr {
     font-size: 18px;
     padding: 0.5em;
   }
+}
+
+.highlight {
+  color: var(--focus-color);
+  font-weight: bold;
 }
 
 .sr-only {

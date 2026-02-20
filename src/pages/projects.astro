@@ -23,7 +23,7 @@ const fundingSlugs = [
 ---
 
 <PageLayout>
-  <h3>Current Projects</h3>
+  <h2>Current Projects</h2>
   <div class="project-cards">
     {
       currentProjects.map((project) => {
@@ -40,7 +40,7 @@ const fundingSlugs = [
     }
   </div>
   <hr />
-  <h3>Past Projects</h3>
+  <h2>Past Projects</h2>
   <div class="project-cards">
     {
       pastProjects.map((project) => {
@@ -57,7 +57,7 @@ const fundingSlugs = [
     }
   </div>
   <hr />
-  <h3>Funding</h3>
+  <h2>Funding</h2>
   <p>We gratefully acknowledge our current and past funding sources.</p>
   <Funding fundingSlugs={fundingSlugs} />
 </PageLayout>
@@ -65,7 +65,7 @@ const fundingSlugs = [
   .project-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2em;
+    gap: 2em 2em;
+    margin: 2em 0em 2em 0em;
   }
 </style>

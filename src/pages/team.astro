@@ -30,29 +30,24 @@ alumni = alumni.sort(
 ---
 
 <PageLayout>
-  <h3>Principal Investigator</h3>
+  <h2>Principal Investigator</h2>
   {
     pis.map((pi) => {
       return <TeamMember member={pi} />;
     })
   }
   <hr />
-  <h3>Graduate Students</h3>
+  <h2>Graduate Students</h2>
   {
     grads.map((grad) => {
       return <TeamMember member={grad} />;
     })
   }
   <hr />
-  <h3>Alumni</h3>
+  <h2>Alumni</h2>
   {
     alumni.map((alumnus) => {
       return <TeamMember member={alumnus} />;
     })
   }
 </PageLayout>
-<style>
-  h3 {
-    margin: 0em 0em 1em 0em;
-  }
-</style>

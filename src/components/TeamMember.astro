@@ -9,7 +9,7 @@ const { Content } = await render(member);
 
 <div class="member">
   <div class="member-info">
-    <h5>{member.data.name}</h5>
+    <h3>{member.data.name}</h3>
     <Content />
     <div class="social-links">
       {
@@ -85,7 +85,6 @@ const { Content } = await render(member);
       <Picture
         src={member.data.imageUrl}
         alt={member.data.imageAlt}
-        layout="constrained"
         width={200}
       />
     )
@@ -94,20 +93,15 @@ const { Content } = await render(member);
 
 <style>
   .member {
-    align-items: vertical;
     display: flex;
     justify-content: space-between;
-    margin: 1em auto;
+    margin: 2em 0em 2em 0em;
   }
   .member-info {
     width: calc(var(--large-width) - 300px);
     margin-right: 2em;
   }
-  .member-info h5 {
-    /* font-style: normal; */
-  }
   .social-links {
     display: flex;
-    /* justify-content: left; */
   }
 </style>

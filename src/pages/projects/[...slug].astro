@@ -1,7 +1,6 @@
 ---
-import { getCollection, render } from "astro:content";
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
-import Funding from "../../components/Funding.astro";
+import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("projects");
@@ -16,9 +15,4 @@ const { Content } = await render(post);
 
 <ProjectLayout {...post.data}>
   <Content />
-  <hr />
-  {post.data.funding && 
-  <h5>Funding</h5>
-  <p>This work was funded in part by {post.data.funding}.</p>
-  <Funding fundingSlugs={post.data.fundingSlugs || []} />}
 </ProjectLayout>
