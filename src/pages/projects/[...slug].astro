@@ -1,18 +1,63 @@
 ---
 import PostLayout from "../../layouts/PostLayout.astro";
+import Funding from "../../components/Funding.astro";
+import PaperCard from "../../components/PaperCard.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("projects");
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: { post },
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { post: project },
   }));
 }
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+const allPapers = await getCollection("papers");
+const currentPapers = allPapers.filter((paper) => paper.data.projects.includes(post.id));
 ---
 
 <PostLayout {...post.data}>
   <Content />
+  {currentPapers.length > 0 && 
+    <hr />
+    <div class="papers-container">
+      <div class="papers-text-container">
+        <h5>Relevant publications</h5>
+      </div>
+      <div class="paper-cards-container">
+        {currentPapers.map((paper) => (
+          <PaperCard
+            title={paper.data.title}
+            citation={paper.data.citation}
+            imageUrl={paper.data.imageUrl}
+            imageAlt={paper.data.imageAlt}
+          />
+        ))}
+      </div>
+    </div>
+  }
+  {post.data.funding && 
+    <hr />
+    <p>This work was funded in part by {post.data.funding}.</p>
+    <Funding fundingSlugs={post.data.fundingSlugs || []} />
+  }
 </PostLayout>
+<style>
+  .papers-container {
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+    ali
+  }
+  .papers-text-container {
+    align-content: center;
+    text-transform: uppercase;
+  }
+  .paper-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+</style>

@@ -6,7 +6,7 @@ import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
 
 const news = defineCollection({
-  // Load Markdown and MDX files in the `src/content/news/` directory.
+  // Load Markdown and MDX files in the `src/content/news/` directory
   loader: glob({ base: "./src/content/news", pattern: "**/*.{md,mdx}" }),
   // Type-check frontmatter using a schema
   schema: z.object({
@@ -23,10 +23,24 @@ const news = defineCollection({
   }),
 });
 
+const papers = defineCollection({
+  loader: glob({ base: "./src/content/papers", pattern: "**/*.{md,mdx}" }),
+  schema: z.object({
+    title: z.string(),
+    imageUrl: z.string(),
+    imageAlt: z.string(),
+    citation: z.string(),
+    projects: z.array(z.string()),
+    date: z.date().optional(),
+    dateUpdated: z.date().optional(),
+    funding: z.string().optional(),
+    fundingSlugs: z.array(z.string()).optional(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
 const projects = defineCollection({
-  // Load Markdown and MDX files in the `src/content/projects/` directory.
   loader: glob({ base: "./src/content/projects", pattern: "**/*.{md,mdx}" }),
-  // Type-check frontmatter using a schema
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),
@@ -42,9 +56,7 @@ const projects = defineCollection({
 });
 
 const team = defineCollection({
-  // Load Markdown and MDX files in the `src/content/team/` directory.
   loader: glob({ base: "./src/content/team", pattern: "**/*.{md,mdx}" }),
-  // Type-check frontmatter using a schema
   schema: ({ image }) =>
     z.object({
       name: z.string(),
@@ -79,4 +91,4 @@ const team = defineCollection({
 // });
 
 // Export a single `collections` object to register your collection(s)
-export const collections = { news, projects, team };
+export const collections = { news, papers, projects, team };
