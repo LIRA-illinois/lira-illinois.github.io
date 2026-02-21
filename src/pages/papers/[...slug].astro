@@ -1,0 +1,24 @@
+---
+import PostLayout from "../../layouts/PostLayout.astro";
+import Funding from "../../components/Funding.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const papers = await getCollection("papers");
+  return papers.map((paper) => ({
+    params: { slug: paper.id },
+    props: { post: paper },
+  }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<PostLayout {...post.data}>
+  <Content />
+  {post.data.funding && 
+    <hr />
+    <p>This work was funded in part by {post.data.funding}.</p>
+    <Funding fundingSlugs={post.data.fundingSlugs || []} />
+  }
+</PostLayout>

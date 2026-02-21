@@ -10,7 +10,7 @@ interface Props {
   imageAlt: string;
 }
 
-const { projectTitle, projectSubtitle, url, imageUrl, imageAlt } = Astro.props;
+const { url, projectTitle, projectSubtitle, imageUrl, imageAlt } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/research/*.{jpeg,jpg,png,gif,svg,webp}",
 );
