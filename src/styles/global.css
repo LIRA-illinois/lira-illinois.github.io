@@ -51,39 +51,44 @@ h1 {
   /* titles */
 	color: var(--heading-color);
 	font-family: var(--font-heading);
-	/* font-size: 3.052em; */
+  /* Minor Third scale */
   font-size: 2.986rem;
+  /* Major Second scale */
+  /* font-size: 2.027rem; */
+  text-transform: uppercase;
 }
 h2 {
   /* section headings */
 	color: var(--heading-color);
 	font-family: var(--font-heading);
-	/* font-size: 2.441em; */
   font-size: 2.488rem;
+  /* font-size: 1.802rem; */
+  text-transform: uppercase;
 }
 h3 {
   /* subsection headings */
 	color: var(--heading-color);
 	font-family: var(--font-heading);
-	/* font-size: 1.953em; */
   font-size: 2.074rem;
+  /* font-size: 1.602rem; */
 }
 h4 {
   /* subtitles */
 	color: var(--heading-color);
 	font-family: var(--font-heading);
-	/* font-size: 1.563em; */
   font-size: 1.728rem;
+  /* font-size: 1.424rem; */
 }
 h5 {
   /* captions */
 	color: var(--heading-color);
 	font-family: var(--font-heading);
-	/* font-size: 1.25em; */
   font-size: 1.44rem;
+  /* font-size: 1.266rem; */
 }
 h6 {
   font-size: 1.2rem;
+  /* font-size: 1.125rem; */
 }
 p {
   font-size: 20px;
