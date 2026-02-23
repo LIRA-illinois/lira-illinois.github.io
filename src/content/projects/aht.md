@@ -1,5 +1,5 @@
 ---
-title: "Ad hoc Teaming"
+title: "Ad Hoc Teaming"
 subtitle: "Learning to adapt to new teammates in multi-agent systems."
 date: 2022-08-16
 dateUpdated: 2024-09-20

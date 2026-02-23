@@ -5,8 +5,19 @@ import Funding from "../components/Funding.astro";
 import { getCollection } from "astro:content";
 
 const allProjects = await getCollection("projects");
-const currentProjects = allProjects.filter((project) => !project.data.past);
-const pastProjects = allProjects.filter((project) => project.data.past);
+const sortedProjects = allProjects.sort((a, b) => {
+  const nameA = a.data.title.toUpperCase();
+  const nameB = b.data.title.toUpperCase();
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  return 0;
+});
+const currentProjects = sortedProjects.filter((project) => !project.data.past);
+const pastProjects = sortedProjects.filter((project) => project.data.past);
 const fundingSlugs = [
   "arl.jpeg",
   "cerl.webp",
