@@ -11,8 +11,8 @@ const news = defineCollection({
   // Type-check frontmatter using a schema
   schema: z.object({
     title: z.string(),
+    date: z.date(),
     subtitle: z.string().optional(),
-    date: z.date().optional(),
     dateUpdated: z.date().optional(),
     imageUrl: z.string().optional(),
     imageAlt: z.string().optional(),
