@@ -1,10 +1,10 @@
 ---
 title: "Explainable AI Agents"
-subtitle: "Explaining and creating explainable autonomous agents."
+subtitle: "Explaining and creating explainable autonomous agents"
 date: 2023-09-01
 dateUpdated: 2026-02-17
-imageUrl: '/src/assets/research/ltl.png'
-imageAlt: "A robot explaining why it made a decision using language."
+imageUrl: '/src/assets/research/ground-robot-xai.jpg'
+imageAlt: "A robot explaining why it made a decision."
 funding: "ONR N00014-20-1-2249"
 fundingSlugs: ["onr.png"]
 ---

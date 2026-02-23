@@ -1,13 +1,13 @@
 ---
 title: "Ad Hoc Teaming"
-subtitle: "Learning to adapt to new teammates in multi-agent systems."
+subtitle: "Learning to adapt to new teammates in multi-agent systems"
 date: 2022-08-16
 dateUpdated: 2024-09-20
-imageUrl: '/src/assets/research/aht-network.svg'
-imageAlt: "A robot adapting to two new robot teammates."
+imageUrl: '/src/assets/research/aht-2.jpg'
+imageAlt: "A robot coordinating with another robot."
 funding: "ONR N00014-20-1-2249"
-fundingSlugs: ["onr.png"]
-papers: ["gpat.md"]
+fundingSlugs: ['onr.png']
+papers: ['gpat.md']
 ---
 
 We work on algorithms for robots to adapt to new teammates in ad hoc multi-robot teams.

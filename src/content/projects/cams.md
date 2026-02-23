@@ -1,6 +1,6 @@
 ---
 title: "CAAMS"
-subtitle: "Encouraging emergent coordination in collective autonomous air mobility systems (CAAMS)."
+subtitle: "Encouraging emergent coordination in collective autonomous air mobility systems (CAAMS)"
 date: 2023-09-01
 dateUpdated: 2026-02-21
 imageUrl: '/src/assets/research/uam.jpeg'

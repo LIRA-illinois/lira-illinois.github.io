@@ -3,7 +3,7 @@ title: "Hierarchical RL"
 subtitle: "Discovering and using hierarchies for autonomous agents"
 date: 2023-09-01
 dateUpdated: 2026-02-17
-imageUrl: '/src/assets/research/hrl.png'
+imageUrl: '/src/assets/research/hrl.jpg'
 imageAlt: "A hierarchical decision policy."
 funding: "DARPA FA8750-18C-0137 and ONR N00014-20-1-2249"
 fundingSlugs: ["darpa.png", "onr.png"]

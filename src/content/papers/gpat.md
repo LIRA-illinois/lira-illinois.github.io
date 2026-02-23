@@ -1,8 +1,8 @@
 ---
 title: "Zero-Shot Coordination in Ad Hoc Teams with Generalized Policy Improvement and Difference Rewards"
 date: 2022-08-16
-imageUrl: '/src/assets/research/aht.png'
-imageAlt: "A robot adapting to two new robot teammates."
+imageUrl: '/src/assets/research/aht-2.jpg'
+imageAlt: "A robot coordinating with another robot."
 funding: "ONR N00014-20-1-2249"
 fundingSlugs: ["onr.png"]
 citation: "AAMAS'26"

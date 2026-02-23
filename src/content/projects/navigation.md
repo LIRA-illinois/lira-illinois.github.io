@@ -1,6 +1,6 @@
 ---
 title: "Robot Navigation and Perception"
-subtitle: "Learning for autonomous robot navigation and perception in the field."
+subtitle: "Learning for autonomous robot navigation and perception in the field"
 date: 2023-09-01
 dateUpdated: 2026-02-17
 imageUrl: '/src/assets/research/WayFAST2.jpg'
