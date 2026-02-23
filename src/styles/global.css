@@ -13,9 +13,10 @@
   --secondary-color-medium: #9C9A9D;    /* storm (light gray) */
   --secondary-color-light: #C8C6C7;     /* storm (lighter gray) */
   --supporting-color: rgb(29, 88, 167); /* industrial (light blue) */
+  --supporting-color-light: rgba(29, 88, 167, 0.1);
 	--background-color: #f4f4f4;          /* il-storm-95 (light gray) */
 	--body-color: #252525;                /* il-storm-10 (dark gray) */
-  --background-card-color: rgba(29, 88, 167, 0.1);
+  --background-card-color: var(--supporting-color-light);
 
 	/* fonts */
   /* https: //cdn.brand.illinois.edu/fonts.html */
@@ -128,7 +129,7 @@ blockquote {
 }
 hr {
 	border: none;
-  border-top: 1px solid var(--secondary-color-light);
+  border-top: 1px solid var(--supporting-color-light);
   margin: 1em 0em 2em 0em;
 }
 @media screen and (max-width: 820px) {
