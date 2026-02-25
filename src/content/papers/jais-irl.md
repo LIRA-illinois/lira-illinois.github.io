@@ -1,12 +1,13 @@
 ---
 title: "A Survey of Inverse Reinforcement Learning in Aviation and Future Outlooks"
-date: 2025-12-01
-imageUrl: '/src/assets/research/uam.jpeg'
+date: 2026-02-01
+imageUrl: '/src/assets/research/irl.png'
 imageAlt: "Urban air mobility is an application of interest for CAAMS."
 funding: "NASA 80NSSC23M0221 and ONR N00014-20-1-2249"
 fundingSlugs: ["nasa.jpg", "onr.png"]
 citation: "JAIS'26"
 projects: ["cams"]
+paperUrl: '/files/jais-irl.pdf'
 ---
 
 <!-- <figure-full-caption-very-large>

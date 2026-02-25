@@ -8,9 +8,10 @@ interface Props {
   imageUrl: string;
   imageAlt: string;
   citation: string;
+  paperUrl: string;
 }
 
-const { url, title, imageUrl, imageAlt, citation } = Astro.props;
+const { url, title, imageUrl, imageAlt, citation, paperUrl } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/research/*.{jpeg,jpg,png,gif,svg,webp}",
 );
@@ -22,10 +23,11 @@ if (!images[imageUrl])
 
 <div class="paper-card">
   <div class="paper-text">
-    <h6><a href={url}>{title}</a></h6>
+    <!-- <h6><a href={url}>{title}</a></h6> -->
+    <h6><a href={paperUrl}>{title}</a></h6>
     <p>{citation}</p>
   </div>
-  <Image src={images[imageUrl]()} alt={imageAlt} width="100" />
+  <Image src={images[imageUrl]()} alt={imageAlt} width="200" />
 </div>
 <style>
   .paper-card {
@@ -34,7 +36,7 @@ if (!images[imageUrl])
     flex-direction: row;
     gap: 0em 2em;
     padding: 0.5em;
-    width: 600px;
+    width: 650px;
   }
   h6 {
     font-weight: normal;

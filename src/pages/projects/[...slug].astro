@@ -14,7 +14,10 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const allPapers = await getCollection("papers");
-const currentPapers = allPapers.filter((paper) => paper.data.projects.includes(post.id));
+let currentPapers = allPapers.filter((paper) => paper.data.projects.includes(post.id));
+currentPapers = currentPapers.sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+);
 ---
 
 <PostLayout {...post.data}>
@@ -33,6 +36,7 @@ const currentPapers = allPapers.filter((paper) => paper.data.projects.includes(p
             citation={paper.data.citation}
             imageUrl={paper.data.imageUrl}
             imageAlt={paper.data.imageAlt}
+            paperUrl={paper.data.paperUrl || ""}
           />
         ))}
       </div>

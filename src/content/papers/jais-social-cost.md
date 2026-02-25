@@ -1,12 +1,13 @@
 ---
 title: "Context-Aware Inefficiency of Self-Interested Agents in UAV Wildfire Fighting"
-date: 2025-12-01
-imageUrl: '/src/assets/research/uam.jpeg'
-imageAlt: "Urban air mobility is an application of interest for CAAMS."
+date: 2026-01-13
+imageUrl: '/src/assets/research/social-cost.gif'
+imageAlt: "A simulation of autonomous drone wildfire fighting."
 funding: "NASA 80NSSC23M0221 and ONR N00014-20-1-2249"
 fundingSlugs: ["nasa.jpg", "onr.png"]
 citation: "JAIS'26"
 projects: ["cams"]
+paperUrl: '/files/social-cost.pdf'
 ---
 
 <!-- <figure-full-caption-very-large>
