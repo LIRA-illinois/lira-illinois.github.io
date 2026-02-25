@@ -1,8 +1,8 @@
 ---
 title: "Intrinsic Reward Policy Optimization for Sparse-Reward Environments"
 date: 2026-01-29
-imageUrl: '/src/assets/research/hierarchical-tree.svg'
-imageAlt: "A hierarchical decision policy."
+imageUrl: '/src/assets/research/irpo.png'
+imageAlt: "IRPO uses multiple exploratory policies to update a base policy."
 citation: "arXiv'26"
 projects: ["hrl"]
 paperUrl: '/files/irpo.pdf'

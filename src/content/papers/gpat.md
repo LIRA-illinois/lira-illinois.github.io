@@ -1,7 +1,7 @@
 ---
 title: "Zero-Shot Coordination in Ad Hoc Teams with Generalized Policy Improvement and Difference Rewards"
 date: 2026-05-25
-imageUrl: '/src/assets/research/gpat-pred-prey.gif'
+imageUrl: '/src/assets/research/gpat-robot-short.gif'
 imageAlt: "A robot coordinating with another robot to pick up different color objects."
 funding: "ONR N00014-20-1-2249"
 fundingSlugs: ["onr.png"]
