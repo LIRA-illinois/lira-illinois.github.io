@@ -49,9 +49,14 @@ if (imageUrl && !images[imageUrl])
   </div>
 </div>
 <hr /> -->
-<div class="image-container">
-    <Image src={images[imageUrl]()} alt={imageAlt} />
-  </div>
+<div class="header-container">
+  {
+    imageUrl && (
+      <div class="image-container">
+        <Image src={images[imageUrl]()} alt={imageAlt} />
+      </div>
+    )
+  }
   <h1>{title}</h1>
   <div class="caption-container">
     <h4>{subtitle}</h4>
