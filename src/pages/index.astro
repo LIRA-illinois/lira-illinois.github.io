@@ -3,7 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroSimple from "../components/HeroSimple.astro";
 import NewsList from "../components/NewsList.astro";
 import heroImage from "../assets/research/drone.png";
+import { Image } from "astro:assets";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import teamImage from "../assets/team/2023-iros.jpg";
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} bodyWidth="400px">
@@ -15,27 +17,41 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       heroAlt="Drone flight"
       width={400}
     />
+    <div class="hero-description">
+      <p>
+        Welcome to the <span class="highlight">L</span>ab for
+        <span class="highlight">I</span>ntelligent
+        <span class="highlight">R</span>obots and
+        <span class="highlight">A</span>gents (LIRA)! Our goal is to advance
+        research on autonomous and intelligent systems with a focus on robots
+        that interact with each other and humans. We primarily work at the
+        intersection of robotics, artificial intelligence (AI), and multi-agent
+        systems, though we draw inspiration from other fields as well.
+      </p>
+      <div class="button-container">
+        <a class="button" href="/research">See our research</a>
+        <a class="button" href="/publications">View our papers</a>
+      </div>
+    </div>
   </div>
-  <div class="home-description">
-    <p>
-      Welcome to the <span class="highlight">L</span>ab for
-      <span class="highlight">I</span>ntelligent
-      <span class="highlight">R</span>obots and
-      <span class="highlight">A</span>gents (LIRA)! Our goal is to advance
-      research on autonomous and intelligent systems with a focus on robots that
-      interact with each other and humans. We primarily work at the intersection
-      of robotics, artificial intelligence, and multi-agent systems, though we
-      draw inspiration from other fields as well.
-    </p>
-    <!-- <p>Check out our <a href="/projects">projects</a> to learn more!</p> -->
-    <div class="button-container">
-      <a class="button" href="/research">See our research</a>
+  <div class="team-container">
+    <Image src={teamImage} alt="Some team members at IROS 2023" width={400} />
+    <div class="team-description">
+      <h3>Who are we?</h3>
+      <p>
+        We are a group of passionate researchers and students at the University
+        of Illinois Urbana-Champaign. Our team includes faculty, graduate
+        students students, and undergraduate researchers who are dedicated to
+        pushing the boundaries of robotics and AI.
+      </p>
       <a class="button" href="/team">Meet our team</a>
     </div>
   </div>
   <div class="news-container">
-    <h2>Latest news</h2>
-    <NewsList maxItems={10} />
+    <div class="news-description">
+      <h3>See our latest news!</h3>
+      <NewsList maxItems={10} />
+    </div>
     <div class="button-container">
       <a class="button" href="/news">See more news</a>
     </div>
@@ -43,23 +59,50 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 </BaseLayout>
 <style>
   .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
     margin: 0 auto;
     max-width: var(--large-width);
+    padding: 3em 0;
   }
-  .home-description {
+  .hero-description {
     margin: 0 auto;
     max-width: var(--medium-width);
     text-align: center;
+  }
+  .team-container {
+    display: flex;
+    gap: 2em;
+    height: 100%;
+    margin: 0 auto;
+    max-width: var(--large-width);
+    padding: 3em 0;
+  }
+  .team-container img {
+    height: 100%;
+  }
+  .team-description {
+    margin: 0 auto;
+    text-align: left;
   }
   .button-container {
     display: flex;
     gap: 2em;
     justify-content: center;
-    margin-top: 1.5em;
-    margin-bottom: 4em;
+    /* margin-top: 1.5em; */
   }
   .news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
     margin: 0 auto;
     max-width: var(--large-width);
+    padding: 3em 0;
+  }
+  @media (max-width: 820px) {
+    .team-container {
+      flex-direction: column;
+    }
   }
 </style>

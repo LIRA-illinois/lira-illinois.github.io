@@ -8,7 +8,9 @@
 	/* colors */
   /* https: //brand.illinois.edu/visual-identity/color#hosted-brand-assets-for-web */
   --primary-color: rgb(19, 41, 75);     /* illini blue */
+  --primary-color-light: rgba(19, 41, 75, 0.6); /* illini blue with 60% opacity */
   --focus-color: #c84113;               /* altgeld orange */
+  --focus-color-light: #c84113cc;       /* altgeld orange with 80% opacity */
 	--secondary-color: #707372;           /* storm (gray) */
   --secondary-color-medium: #9C9A9D;    /* storm (light gray) */
   --secondary-color-light: #C8C6C7;     /* storm (lighter gray) */
@@ -52,16 +54,14 @@ h1 {
   text-transform: uppercase;
 }
 h2 {
-  /* section headings */
+  /* page headings */
   font-size: 2.488rem;
   /* font-size: 1.802rem; */
-  text-transform: uppercase;
 }
 h3 {
-  /* subsection headings */
+  /* section headings */
   font-size: 2.074rem;
   /* font-size: 1.602rem; */
-  text-transform: uppercase;
 }
 h4 {
   /* subtitles */
@@ -90,7 +90,7 @@ a {
 a:hover {
 	color: var(--focus-color);
 }
-.prose p {
+/* .prose p {
 	margin-bottom: 2em;
 }
 textarea {
@@ -102,13 +102,13 @@ input {
 }
 table {
 	width: 100%;
-}
+} */
 img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
 }
-code {
+/* code {
 	padding: 2px 5px;
 	background-color: var(--gray-light);
 	border-radius: 2px;
@@ -126,7 +126,7 @@ blockquote {
 	margin: 0;
 	font-family: var(--il-font-serif);
 	font-size: 1.333em;
-}
+} */
 hr {
 	border: none;
   border-top: 1px solid var(--supporting-color-light);
@@ -139,7 +139,7 @@ hr {
   }
 }
 .button {
-  background-color: var(--primary-color);
+  background-color: var(--focus-color);
   border-radius: 12px;
   display: inline-block;
   padding: 0.5em 1em;
@@ -148,11 +148,12 @@ hr {
   /* transition: background-color 0.3s ease; */
 }
 .button:hover {
-  background-color: var(--focus-color);
+  background-color: var(--supporting-color);
   cursor: pointer;
 }
 a.button {
   color: white;
+  font-size: 1rem;
   /* text-transform: uppercase; */
 }
 .highlight {
