@@ -27,11 +27,18 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       of robotics, artificial intelligence, and multi-agent systems, though we
       draw inspiration from other fields as well.
     </p>
-    <p>Check out our <a href="/projects">projects</a> to learn more!</p>
+    <!-- <p>Check out our <a href="/projects">projects</a> to learn more!</p> -->
+    <div class="button-container">
+      <a class="button" href="/research">See our research</a>
+      <a class="button" href="/team">Meet our team</a>
+    </div>
   </div>
   <div class="news-container">
     <h2>Latest news</h2>
     <NewsList maxItems={10} />
+    <div class="button-container">
+      <a class="button" href="/news">See more news</a>
+    </div>
   </div>
 </BaseLayout>
 <style>
@@ -43,6 +50,13 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     margin: 0 auto;
     max-width: var(--medium-width);
     text-align: center;
+  }
+  .button-container {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 1.5em;
+    margin-bottom: 4em;
   }
   .news-container {
     margin: 0 auto;
