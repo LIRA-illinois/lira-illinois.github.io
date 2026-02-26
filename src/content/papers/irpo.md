@@ -1,7 +1,7 @@
 ---
 title: "Intrinsic Reward Policy Optimization for Sparse-Reward Environments"
 date: 2026-01-29
-imageUrl: '/src/assets/research/irpo.png'
+imageUrl: '/src/assets/research/irpo.gif'
 imageAlt: "IRPO uses multiple exploratory policies to update a base policy."
 citation: "arXiv'26"
 projects: ["hrl"]

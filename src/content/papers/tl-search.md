@@ -6,7 +6,7 @@ imageAlt: "An example output of our tree search method."
 funding: "ONR N00014-20-1-2249"
 fundingSlugs: ["onr.png"]
 citation: "L-CSS'24"
-projects: ["explainable-ai"]
+projects: ["explainable-verifiable-learning"]
 paperUrl: '/files/tl-search.pdf'
 ---
 

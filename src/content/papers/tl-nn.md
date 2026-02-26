@@ -6,7 +6,7 @@ imageAlt: "A comparison or TLNet with existing methods."
 funding: "ONR N00014-20-1-2249"
 fundingSlugs: ["onr.png"]
 citation: "RA-L'26"
-projects: ["explainable-ai"]
+projects: ["explainable-verifiable-learning"]
 paperUrl: '/files/tl-nn.pdf'
 ---
 
