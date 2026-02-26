@@ -1,0 +1,32 @@
+---
+import { Icon } from 'astro-icon/components';
+import SocialLink from './SocialLink.astro';
+
+const today = new Date();
+---
+
+<footer>
+	<div class="social-links">
+		<SocialLink href="mailto:huytran1@illinois.edu" srText="Email us" iconName="envelope-solid-full" />
+		<SocialLink href="https://scholar.google.com/citations?user=TgaPukcAAAAJ&hl=en" srText="Visit our Google Scholar profile" iconName="google-scholar-brands-solid-full" />
+		<SocialLink href="https://github.com/lira-illinois" srText="Visit our GitHub repo" iconName="github-brands-solid-full" />
+		</a>
+	</div>
+	&copy; {today.getFullYear()} Huy T. Tran. Powered by <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>.
+</footer>
+<style>
+	footer {
+		color: var(--secondary-color);
+		margin: 0em auto;
+		max-width: var(--medium-width);
+		padding: 2em 0em 0em 0em;
+		text-align: center;
+	}
+	footer a {
+      color: var(--secondary-color);
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+	}
+</style>

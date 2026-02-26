@@ -1,0 +1,77 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Funding from "../components/Funding.astro";
+import { getCollection } from "astro:content";
+
+const allProjects = await getCollection("projects");
+const sortedProjects = allProjects.sort((a, b) => {
+  const nameA = a.data.title.toUpperCase();
+  const nameB = b.data.title.toUpperCase();
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  return 0;
+});
+const currentProjects = sortedProjects.filter((project) => !project.data.past);
+const pastProjects = sortedProjects.filter((project) => project.data.past);
+const fundingSlugs = [
+  "arl.jpeg",
+  "cerl.webp",
+  "darpa.png",
+  "isee.png",
+  "mitre.png",
+  "nasa.jpg",
+  "onr.png",
+];
+---
+
+<PageLayout>
+  <h2>Current Projects</h2>
+  <div class="project-cards">
+    {
+      currentProjects.map((project) => {
+        return (
+          <ProjectCard
+            url={`/projects/${project.id}`}
+            projectTitle={project.data.title}
+            projectSubtitle={project.data.subtitle}
+            imageUrl={project.data.imageUrl}
+            imageAlt={project.data.imageAlt}
+          />
+        );
+      })
+    }
+  </div>
+  <hr />
+  <h2>Past Projects</h2>
+  <div class="project-cards">
+    {
+      pastProjects.map((project) => {
+        return (
+          <ProjectCard
+            projectTitle={project.data.title}
+            projectSubtitle={project.data.subtitle}
+            url={`/projects/${project.id}`}
+            imageUrl={project.data.imageUrl}
+            imageAlt={project.data.imageAlt}
+          />
+        );
+      })
+    }
+  </div>
+  <hr />
+  <p>We gratefully acknowledge our current and past funding sources.</p>
+  <Funding fundingSlugs={fundingSlugs} />
+</PageLayout>
+<style>
+  .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em 2em;
+    margin: 2em 0em 2em 0em;
+  }
+</style>

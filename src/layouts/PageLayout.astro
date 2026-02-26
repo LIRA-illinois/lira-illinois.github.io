@@ -1,0 +1,16 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="page-container">
+    <slot />
+  </div>
+</BaseLayout>
+<style>
+  .page-container {
+    margin: 0 auto;
+    max-width: var(--large-width);
+  }
+</style>

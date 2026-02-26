@@ -1,0 +1,20 @@
+---
+const { date, url, description } = Astro.props;
+---
+
+<div class="date">{date}</div>
+<div>
+  <a href={url}>{description}</a>
+</div>
+
+<style>
+  .date {
+    font-weight: bold;
+    padding-left: 1em;
+  }
+  @media screen and (max-width: 820px) {
+    .date {
+      padding-left: 0;
+    }
+  }
+</style>

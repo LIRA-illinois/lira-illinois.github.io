@@ -1,0 +1,21 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import PostHeader from "../components/PostHeader.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const { title, subtitle, date, dateUpdated, imageUrl, imageAlt } = Astro.props;
+
+---
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="post-container">
+    <PostHeader title={title} subtitle={subtitle} date={date} dateUpdated={dateUpdated} imageUrl={imageUrl} imageAlt={imageAlt} />
+    <slot />
+  </div>
+</BaseLayout>
+<style>
+  .post-container {
+    margin: 0 auto;
+    max-width: var(--medium-width);
+  }
+</style>

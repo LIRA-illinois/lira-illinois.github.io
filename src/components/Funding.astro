@@ -1,0 +1,26 @@
+---
+import FundingImage from './FundingImage.astro';
+interface Props {
+  fundingSlugs: string[];
+}
+const { fundingSlugs } = Astro.props;
+---
+
+<div class="funding-images">
+  {
+    fundingSlugs.map((fundingSlug) => {
+      return (
+        <FundingImage url={`/src/assets/funding/${fundingSlug}`} alt={fundingSlug.toUpperCase()} height={80} />
+      );
+    })
+  }
+</div>
+<style>
+  .funding-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 1em;
+  }
+</style>

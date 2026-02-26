@@ -1,0 +1,53 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import TeamMember from "../components/TeamMember.astro";
+import { getCollection } from "astro:content";
+
+let pis = await getCollection("team", ({ data }) => {
+  return data.position === "PI";
+});
+pis = pis.sort(
+  (b, a) =>
+    new Date(b.data.dateJoined).valueOf() -
+    new Date(a.data.dateJoined).valueOf(),
+);
+let grads = await getCollection("team", ({ data }) => {
+  return data.position === "Graduate Student";
+});
+grads = grads.sort(
+  (b, a) =>
+    new Date(b.data.dateJoined).valueOf() -
+    new Date(a.data.dateJoined).valueOf(),
+);
+let alumni = await getCollection("team", ({ data }) => {
+  return data.position === "Alumnus";
+});
+alumni = alumni.sort(
+  (b, a) =>
+    new Date(b.data.dateJoined).valueOf() -
+    new Date(a.data.dateJoined).valueOf(),
+);
+---
+
+<PageLayout>
+  <h2>Principal Investigator</h2>
+  {
+    pis.map((pi) => {
+      return <TeamMember member={pi} />;
+    })
+  }
+  <hr />
+  <h2>Graduate Students</h2>
+  {
+    grads.map((grad) => {
+      return <TeamMember member={grad} />;
+    })
+  }
+  <hr />
+  <h2>Alumni</h2>
+  {
+    alumni.map((alumnus) => {
+      return <TeamMember member={alumnus} />;
+    })
+  }
+</PageLayout>
