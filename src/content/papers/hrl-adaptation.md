@@ -4,7 +4,7 @@ date: 2020-05-31
 imageUrl: '/src/assets/research/hrl-icra.png'
 imageAlt: "A hierarchical decision policy."
 funding: "DARPA FA8750-18C-0137"
-fundingSlugs: ["dapra.png"]
+fundingSlugs: ["darpa.png"]
 citation: "ICRA'20"
 projects: ["hrl"]
 paperUrl: '/files/hrl-icra.pdf'
