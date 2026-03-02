@@ -4,7 +4,7 @@ position: "Graduate Student"
 dateJoined: 2024-07-16
 dateUpdated: 2026-02-27
 imageUrl: '../../assets/team/minjae.jpg'
-imageAlt: "Headshot of Minjae Cho."
+imageAlt: "Headshot of MJ (Minjae) Cho."
 website: 'https://mgineer117.github.io/'
 github: 'https://github.com/Mgineer117'
 linkedIn: 'https://www.linkedin.com/in/mj-minjae-cho-407b9a224/'
