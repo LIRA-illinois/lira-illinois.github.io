@@ -104,4 +104,25 @@ const { Content } = await render(member);
   .social-links {
     display: flex;
   }
+
+  .member :global(img) {
+    flex: 0 0 200px;
+    width: 200px;
+    max-width: 200px;
+  }
+
+  @media (max-width: 820px) {
+    .member {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+    .member-info {
+      width: 100%;
+      margin-right: 0;
+    }
+    .member :global(img) {
+      width: min(175px, 100%);
+      max-width: 100%;
+    }
+  }
 </style>
