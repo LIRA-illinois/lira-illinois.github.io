@@ -50,10 +50,10 @@ currentPapers = currentPapers.sort(
 </PostLayout>
 <style>
   .papers-container {
+    align-items: flex-start;
     display: flex;
     gap: 2em;
     justify-content: space-between;
-    ali
   }
   .papers-text-container {
     align-content: center;
@@ -63,5 +63,17 @@ currentPapers = currentPapers.sort(
     display: flex;
     flex-direction: column;
     gap: 1em;
+  }
+
+  @media (max-width: 1020px) {
+    .papers-container {
+      align-items: stretch;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .paper-cards-container {
+      width: 100%;
+    }
   }
 </style>
