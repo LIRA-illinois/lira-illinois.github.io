@@ -2,18 +2,144 @@
 import HeaderLink from "./HeaderLink.astro";
 ---
 
-<nav>
-  <HeaderLink href="/">Home</HeaderLink>
-  <HeaderLink href="/team">Team</HeaderLink>
-  <HeaderLink href="/research">Research</HeaderLink>
-  <HeaderLink href="/publications">Publications</HeaderLink>
-  <HeaderLink href="/news">News</HeaderLink>
+<nav class="site-nav">
+  <button
+    class="menu-button"
+    aria-expanded="false"
+    aria-controls="primary-menu"
+    type="button"
+  >
+    Menu
+  </button>
+  <div id="primary-menu" class="menu-links" data-open="false">
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/team">Team</HeaderLink>
+    <HeaderLink href="/research">Research</HeaderLink>
+    <HeaderLink href="/publications">Publications</HeaderLink>
+    <HeaderLink href="/news">News</HeaderLink>
+  </div>
 </nav>
+
+<script>
+  const nav = document.querySelector(".site-nav");
+  const button = nav?.querySelector<HTMLButtonElement>(".menu-button");
+  const menu = nav?.querySelector<HTMLDivElement>(".menu-links");
+  const menuLinks = menu?.querySelectorAll("a");
+
+  const closeMenu = () => {
+    if (!button || !menu) return;
+    button.setAttribute("aria-expanded", "false");
+    menu.setAttribute("data-open", "false");
+  };
+
+  button?.addEventListener("click", () => {
+    if (!button || !menu) return;
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!isOpen));
+    menu.setAttribute("data-open", String(!isOpen));
+  });
+
+  menuLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!nav || !button) return;
+    const target = event.target;
+    if (!(target instanceof Node)) return;
+    const clickedInsideNav = nav.contains(target);
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    if (!clickedInsideNav && isOpen) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+      button?.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 820) {
+      closeMenu();
+    }
+  });
+</script>
+
 <style>
-  nav {
+  .site-nav {
     align-items: center;
     display: flex;
     flex: 1;
     justify-content: flex-end;
+    position: relative;
+  }
+
+  .menu-button {
+    background-color: var(--focus-color);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    padding: 0.5rem 0.85rem;
+    text-transform: uppercase;
+  }
+
+  .menu-button:hover {
+    background-color: var(--supporting-color);
+  }
+
+  .menu-links {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 820px) {
+    /* .site-nav {
+      justify-content: flex-end;
+    } */
+
+    .menu-button {
+      display: inline-block;
+    }
+
+    .menu-links {
+      background: var(--background-color);
+      border: 1px solid var(--secondary-color-light);
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      display: none;
+      flex-direction: column;
+      min-width: 13rem;
+      padding: 0.8rem;
+      position: absolute;
+      right: 0;
+      top: calc(100% + 0.6rem);
+      z-index: 20;
+    }
+
+    .menu-links[data-open="true"] {
+      display: flex;
+    }
+
+    .menu-links :global(a) {
+      padding: 0.5rem 0;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 821px) {
+    .menu-links {
+      display: flex !important;
+    }
   }
 </style>
