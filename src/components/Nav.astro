@@ -9,7 +9,7 @@ import HeaderLink from "./HeaderLink.astro";
     aria-controls="primary-menu"
     type="button"
   >
-    Menu
+    <span class="sr-only">Menu</span>
   </button>
   <div id="primary-menu" class="menu-links" data-open="false">
     <HeaderLink href="/">Home</HeaderLink>
@@ -80,21 +80,47 @@ import HeaderLink from "./HeaderLink.astro";
   }
 
   .menu-button {
-    background-color: var(--focus-color);
+    align-items: center;
+    background: transparent;
     border: none;
-    border-radius: 6px;
-    color: white;
+    border-radius: 4px;
     cursor: pointer;
     display: none;
-    font-family: var(--font-heading);
-    font-size: 0.95rem;
-    letter-spacing: 0.03em;
-    padding: 0.5rem 0.85rem;
-    text-transform: uppercase;
+    height: 2.25rem;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    width: 2.5rem;
   }
 
-  .menu-button:hover {
-    background-color: var(--supporting-color);
+  .menu-button::before,
+  .menu-button::after {
+    background-color: var(--secondary-color);
+    border-radius: 999px;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 1.4rem;
+  }
+
+  .menu-button::before {
+    top: 0.8rem;
+  }
+
+  .menu-button::after {
+    top: 1.35rem;
+  }
+
+  .menu-button:hover::before,
+  .menu-button:hover::after {
+    background-color: var(--focus-color);
+  }
+
+  .menu-button:focus-visible {
+    outline: 2px solid var(--supporting-color);
+    outline-offset: 2px;
   }
 
   .menu-links {
