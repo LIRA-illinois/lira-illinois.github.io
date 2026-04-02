@@ -30,24 +30,39 @@ alumni = alumni.sort(
 ---
 
 <PageLayout>
-  <h2>Principal Investigator</h2>
-  {
-    pis.map((pi) => {
-      return <TeamMember member={pi} />;
-    })
-  }
-  <hr />
-  <h2>Graduate Students</h2>
-  {
-    grads.map((grad) => {
-      return <TeamMember member={grad} />;
-    })
-  }
-  <hr />
-  <h2>Alumni</h2>
-  {
-    alumni.map((alumnus) => {
-      return <TeamMember member={alumnus} />;
-    })
-  }
+  <div class="page-container">
+    <div class="pi-container">
+      <h2>Principal Investigator</h2>
+      {
+        pis.map((pi) => {
+          return <TeamMember member={pi} />;
+        })
+      }
+      <hr />
+    </div>
+    <div class="grad-container">
+      <h2>Graduate Students</h2>
+      {
+        grads.map((grad) => {
+          return <TeamMember member={grad} />;
+        })
+      }
+      <hr />
+    </div>
+    <div class="alumni-container">
+      <h2>Alumni</h2>
+      {
+        alumni.map((alumnus) => {
+          return <TeamMember member={alumnus} />;
+        })
+      }
+    </div>
+  </div>
 </PageLayout>
+<style>
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+</style>

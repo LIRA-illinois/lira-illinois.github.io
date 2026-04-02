@@ -30,44 +30,59 @@ const fundingSlugs = [
 ---
 
 <PageLayout>
-  <h2>Current Projects</h2>
-  <div class="project-cards">
-    {
-      currentProjects.map((project) => {
-        return (
-          <ProjectCard
-            url={`/projects/${project.id}`}
-            projectTitle={project.data.title}
-            projectSubtitle={project.data.subtitle}
-            imageUrl={project.data.imageUrl}
-            imageAlt={project.data.imageAlt}
-          />
-        );
-      })
-    }
+  <div class="page-container">
+    <div class="current-container">
+      <h2>Current Projects</h2>
+      <div class="project-cards">
+        {
+          currentProjects.map((project) => {
+            return (
+              <ProjectCard
+                url={`/projects/${project.id}`}
+                projectTitle={project.data.title}
+                projectSubtitle={project.data.subtitle}
+                imageUrl={project.data.imageUrl}
+                imageAlt={project.data.imageAlt}
+              />
+            );
+          })
+        }
+      </div>
+      <hr />
+    </div>
+    <div class="past-container">
+      <h2>Past Projects</h2>
+      <div class="project-cards">
+        {
+          pastProjects.map((project) => {
+            return (
+              <ProjectCard
+                projectTitle={project.data.title}
+                projectSubtitle={project.data.subtitle}
+                url={`/projects/${project.id}`}
+                imageUrl={project.data.imageUrl}
+                imageAlt={project.data.imageAlt}
+              />
+            );
+          })
+        }
+      </div>
+      <hr />
+    </div>
+    <div class="funding-container">
+      <h2>Funding</h2>
+      <p>We gratefully acknowledge our current and past funding sources.</p>
+      <Funding fundingSlugs={fundingSlugs} />
+    </div>
   </div>
-  <hr />
-  <h2>Past Projects</h2>
-  <div class="project-cards">
-    {
-      pastProjects.map((project) => {
-        return (
-          <ProjectCard
-            projectTitle={project.data.title}
-            projectSubtitle={project.data.subtitle}
-            url={`/projects/${project.id}`}
-            imageUrl={project.data.imageUrl}
-            imageAlt={project.data.imageAlt}
-          />
-        );
-      })
-    }
-  </div>
-  <hr />
-  <p>We gratefully acknowledge our current and past funding sources.</p>
-  <Funding fundingSlugs={fundingSlugs} />
 </PageLayout>
+
 <style>
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
   .project-cards {
     display: flex;
     flex-wrap: wrap;

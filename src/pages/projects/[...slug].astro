@@ -14,45 +14,63 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const allPapers = await getCollection("papers");
-let currentPapers = allPapers.filter((paper) => paper.data.projects.includes(post.id));
+let currentPapers = allPapers.filter((paper) =>
+  paper.data.projects.includes(post.id),
+);
 currentPapers = currentPapers.sort(
   (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
 );
 ---
 
 <PostLayout {...post.data}>
-  <Content />
-  {currentPapers.length > 0 && 
-    <hr />
-    <div class="papers-container">
-      <div class="papers-text-container">
-        <h5>Relevant publications</h5>
-      </div>
-      <div class="paper-cards-container">
-        {currentPapers.map((paper) => (
-          <PaperCard
-            url={`/papers/${paper.id}`}
-            title={paper.data.title}
-            citation={paper.data.citation}
-            imageUrl={paper.data.imageUrl}
-            imageAlt={paper.data.imageAlt}
-            paperUrl={paper.data.paperUrl || ""}
-          />
-        ))}
-      </div>
+  <div class="page-container">
+    <div class="content-container">
+      <Content />
+      <hr />
     </div>
-  }
-  {post.data.funding && 
-    <hr />
-    <p>This work was funded in part by {post.data.funding}.</p>
-    <Funding fundingSlugs={post.data.fundingSlugs || []} />
-  }
+    {
+      currentPapers.length > 0 && (
+        <div class="papers-container">
+          <div class="papers-container-horizontal">
+            <div class="papers-text-container">
+              <h5>Relevant publications</h5>
+            </div>
+            <div class="paper-cards-container">
+              {currentPapers.map((paper) => (
+                <PaperCard
+                  url={`/papers/${paper.id}`}
+                  title={paper.data.title}
+                  citation={paper.data.citation}
+                  imageUrl={paper.data.imageUrl}
+                  imageAlt={paper.data.imageAlt}
+                  paperUrl={paper.data.paperUrl || ""}
+                />
+              ))}
+            </div>
+          </div>
+          <hr />
+        </div>
+      )
+    }
+    {
+      post.data.funding && (
+        <div class="funding-container">
+          <p>This work was funded in part by {post.data.funding}.</p>
+          <Funding fundingSlugs={post.data.fundingSlugs || []} />
+        </div>
+      )
+    }
+  </div>
 </PostLayout>
 <style>
-  .papers-container {
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  .papers-container-horizontal {
     align-items: flex-start;
     display: flex;
-    gap: 2em;
     justify-content: space-between;
   }
   .papers-text-container {
@@ -66,12 +84,11 @@ currentPapers = currentPapers.sort(
   }
 
   @media (max-width: 1020px) {
-    .papers-container {
+    .papers-container-horizontal {
       align-items: stretch;
       flex-direction: column;
       gap: 1em;
     }
-
     .paper-cards-container {
       width: 100%;
     }
