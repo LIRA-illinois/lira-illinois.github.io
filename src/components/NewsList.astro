@@ -10,42 +10,35 @@ const { maxItems = 0 } = Astro.props;
 const latestNews = allNews.slice(0, maxItems);
 ---
 
-<div class="news-container">
-  <div class="news-table">
-    {
-      maxItems === 0
-        ? allNews.map((post) => (
-            <NewsItem
-              date={post.data.date.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "short",
-              })}
-              url={`/news/${post.id}`}
-              description={post.data.title}
-            />
-          ))
-        : latestNews.map((post) => (
-            <NewsItem
-              date={post.data.date.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "short",
-              })}
-              url={`/news/${post.id}`}
-              description={post.data.title}
-            />
-          ))
-    }
-  </div>
+<div class="news-table">
+  {
+    maxItems === 0
+      ? allNews.map((post) => (
+          <NewsItem
+            date={post.data.date.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "short",
+            })}
+            url={`/news/${post.id}`}
+            description={post.data.title}
+          />
+        ))
+      : latestNews.map((post) => (
+          <NewsItem
+            date={post.data.date.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "short",
+            })}
+            url={`/news/${post.id}`}
+            description={post.data.title}
+          />
+        ))
+  }
 </div>
 <style>
-  .news-container {
-    margin: 0 auto;
-    max-width: var(--large-width);
-    padding-top: 1em;
-  }
   .news-table {
     display: grid;
-    gap: 1em 2em;
+    gap: 0.5em 2em;
     grid-template-columns: max-content auto;
   }
 </style>
