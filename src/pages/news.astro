@@ -4,6 +4,15 @@ import NewsList from "../components/NewsList.astro";
 ---
 
 <PageLayout>
-  <h2>LIRA News</h2>
-  <NewsList maxItems={0} />
+  <div class="news-container">
+    <h2>LIRA News</h2>
+    <NewsList maxItems={0} />
+  </div>
 </PageLayout>
+<style>
+  .news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+</style>
