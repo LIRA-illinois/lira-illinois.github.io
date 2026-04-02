@@ -8,12 +8,15 @@
 	/* colors */
   /* https: //brand.illinois.edu/visual-identity/color#hosted-brand-assets-for-web */
   --primary-color: rgb(19, 41, 75);     /* illini blue */
-  --primary-color-light: rgba(19, 41, 75, 0.6); /* illini blue with 60% opacity */
+  --primary-color-medium: rgba(19, 41, 75, 0.6); /* illini blue with 60% opacity */
+  --primary-color-light: rgba(19, 41, 75, 0.4);  /* illini blue with 40% opacity */
   --focus-color: #c84113;               /* altgeld orange */
   --focus-color-light: #c84113cc;       /* altgeld orange with 80% opacity */
-	--secondary-color: #707372;           /* storm (gray) */
-  --secondary-color-medium: #9C9A9D;    /* storm (light gray) */
-  --secondary-color-light: #C8C6C7;     /* storm (lighter gray) */
+	/* --secondary-color: #707372;           /* storm (gray) */
+  /* --secondary-color-medium: #9C9A9D;    /* storm (light gray) */
+  /* --secondary-color-light: #C8C6C7;     /* storm (lighter gray) */
+  --secondary-color: var(--primary-color-medium);
+  --secondary-color-light: var(--primary-color-light);
   --supporting-color: rgb(29, 88, 167); /* industrial (light blue) */
   --supporting-color-light: rgba(29, 88, 167, 0.1);
 	--background-color: #f4f4f4;          /* il-storm-95 (light gray) */

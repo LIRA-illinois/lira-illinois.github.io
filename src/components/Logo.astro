@@ -1,13 +1,6 @@
 ---
-import { SITE_TITLE } from '../consts';
+import { Picture } from "astro:assets";
+import logo from "../assets/research/lira-logo-wide-stack.png";
 ---
 
-<a href="/">{SITE_TITLE}</a>
-<style>
-  a {
-	color: var(--primary-color);
-    font-weight: bolder;
-    padding: 0;
-    text-decoration: none;
-  }
-</style>
+<a href="/"><Picture src={logo} alt="LIRA Logo" width={150} /></a>
