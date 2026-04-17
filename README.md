@@ -1,5 +1,13 @@
 # LIRA Website
 
+## Updating the Publications Page
+
+The publications page assumes citations are in a `src/assets/pubs.json` file. You can use [Pandoc](https://pandoc.org/) to convert a `.bibtex` file into a `.json` file as follows:
+
+```bash
+$ pandoc src/assets/pubs.bib -t csljson -o src/assets/pubs.json
+```
+
 ## 🚀 Project Structure
 
 ```text

@@ -1,0 +1,99 @@
+---
+const { pub } = Astro.props;
+
+type PublicationAuthor = {
+  family?: string;
+  given?: string;
+};
+
+const formatAuthor = (author: PublicationAuthor) => {
+  const given = author?.given ?? "";
+  const family = author?.family ?? "";
+  return [given, family].filter(Boolean).join(" ");
+};
+
+const formattedAuthors = (pub["author"] ?? []).map(formatAuthor).join(", ");
+const publicationDoi = pub["DOI"] ?? "";
+const publicationName =
+  pub["container-title"] ??
+  (publicationDoi.toLowerCase().includes("arxiv") ? "arXiv" : "");
+const publicationUrl = pub["URL"] ?? "";
+const publicationYear = pub["issued"]?.["date-parts"]?.[0]?.[0] ?? "";
+---
+
+<div class="publication">
+  <div class="pub-title">
+    <p>{pub["title"]}</p>
+  </div>
+  <div class="pub-authors">
+    <p>{formattedAuthors}</p>
+  </div>
+  <div class="pub-name">
+    <p>{publicationName}, {publicationYear}</p>
+  </div>
+  <div class="pub-links">
+    {
+      publicationDoi && (
+        <a
+          class="button"
+          href={`https://doi.org/${publicationDoi}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          DOI
+        </a>
+      )
+    }
+    {
+      publicationUrl && (
+        <a
+          class="button"
+          href={publicationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PDF
+        </a>
+      )
+    }
+  </div>
+</div>
+<style>
+  .publication {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
+  p {
+    margin: 0;
+  }
+  .pub-title {
+    font-weight: bold;
+  }
+  .pub-name {
+    color: var(--secondary-color);
+    font-style: italic;
+  }
+  .pub-links {
+    display: flex;
+    gap: 1rem;
+  }
+  .button {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color-light);
+    border-color: var(--secondary-color-light);
+    border-radius: 12px;
+    color: var(--secondary-color);
+    /* background-color: var(--secondary-color-light); */
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-align: center;
+    text-decoration: none;
+    width: 3rem;
+  }
+  .button:hover {
+    background-color: var(--supporting-color);
+    color: white;
+    cursor: pointer;
+  }
+</style>
