@@ -14,7 +14,16 @@ const sortedPubs = [...pubs].sort((a, b) => {
   return by - ay || bm - am || bd - ad;
 });
 
-const pubsByYear = sortedPubs.reduce<Record<string, PublicationEntry[]>>((acc, pub) => {
+const isArxivWithoutContainerTitle = (pub: PublicationEntry): boolean => {
+  const hasContainerTitle = Boolean(pub["container-title"]);
+  const doi = (pub["DOI"] ?? "").toLowerCase();
+  return !hasContainerTitle && doi.includes("arxiv");
+};
+
+const arxivPubs = sortedPubs.filter(isArxivWithoutContainerTitle);
+const nonArxivPubs = sortedPubs.filter((pub) => !isArxivWithoutContainerTitle(pub));
+
+const pubsByYear = nonArxivPubs.reduce<Record<string, PublicationEntry[]>>((acc, pub) => {
   const [year] = getDateParts(pub);
   if (!acc[year]) {
     acc[year] = [];
@@ -34,18 +43,36 @@ const years = Object.keys(pubsByYear)
     <a href="https://scholar.google.com/citations?hl=en&user=TgaPukcAAAAJ&view_op=list_works&sortby=pubdate"> Google Scholar page</a>.
   </p>
   <div class="pubs-container">
-    {years.map((year) => (
+    {arxivPubs.length > 0 && (
       <div class="pub-year">
-        <h3>{year}</h3>
-        {pubsByYear[year].map((pub) => (
+        <h4>Preprints</h4>
+        <div class="year-container">
+          {arxivPubs.map((pub) => (
             <Publication pub={pub} />
           ))}
+        </div>
+      </div>
+    )}
+    {years.map((year) => (
+      <div class="pub-year">
+        <h4>{year}</h4>
+        <div class="year-container">
+          {pubsByYear[year].map((pub) => (
+            <Publication pub={pub} />
+          ))}
+        </div>
       </div>
     ))}
   </div>
 </PageLayout>
 <style>
   .pubs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+  }
+  .year-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
