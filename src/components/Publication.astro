@@ -17,6 +17,7 @@ const publicationDoi = pub["DOI"] ?? "";
 const publicationName =
   pub["container-title"] ??
   (publicationDoi.toLowerCase().includes("arxiv") ? "arXiv" : "");
+const publicationUrl = pub["URL"] ?? "";
 const publicationYear = pub["issued"]?.["date-parts"]?.[0]?.[0] ?? "";
 ---
 
@@ -29,6 +30,32 @@ const publicationYear = pub["issued"]?.["date-parts"]?.[0]?.[0] ?? "";
   </div>
   <div class="pub-name">
     <p>{publicationName}, {publicationYear}</p>
+  </div>
+  <div class="pub-links">
+    {
+      publicationDoi && (
+        <a
+          class="button"
+          href={`https://doi.org/${publicationDoi}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          DOI
+        </a>
+      )
+    }
+    {
+      publicationUrl && (
+        <a
+          class="button"
+          href={publicationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PDF
+        </a>
+      )
+    }
   </div>
 </div>
 <style>
@@ -47,5 +74,22 @@ const publicationYear = pub["issued"]?.["date-parts"]?.[0]?.[0] ?? "";
   .pub-name {
     color: var(--secondary-color);
     font-style: italic;
+  }
+  .pub-links {
+    display: flex;
+    gap: 1rem;
+  }
+  .button {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color-light);
+    border-color: var(--secondary-color-light);
+    border-radius: 12px;
+    color: var(--secondary-color);
+    /* background-color: var(--secondary-color-light); */
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-align: center;
+    text-decoration: none;
+    width: 3rem;
   }
 </style>
