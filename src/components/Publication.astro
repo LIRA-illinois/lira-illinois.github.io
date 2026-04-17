@@ -1,0 +1,52 @@
+---
+const { pub } = Astro.props;
+
+type PublicationAuthor = {
+  family?: string;
+  given?: string;
+};
+
+const formatAuthor = (author: PublicationAuthor) => {
+  const given = author?.given ?? "";
+  const family = author?.family ?? "";
+  return [given, family].filter(Boolean).join(" ");
+};
+
+const formattedAuthors = (pub["author"] ?? []).map(formatAuthor).join(", ");
+const publicationDoi = pub["DOI"] ?? "";
+const publicationName =
+  pub["container-title"] ??
+  (publicationDoi.toLowerCase().includes("arxiv") ? "arXiv" : "");
+const publicationYear = pub["issued"]?.["date-parts"]?.[0]?.[0] ?? "";
+---
+
+<div class="publication">
+  <div class="pub-title">
+    <p>{pub["title"]}</p>
+  </div>
+  <div class="pub-authors">
+    <p>{formattedAuthors}</p>
+  </div>
+  <div class="pub-name">
+    <p>{publicationName}, {publicationYear}</p>
+  </div>
+</div>
+<style>
+  .publication {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    margin: 1rem 0 2rem 0;
+  }
+  p {
+    margin: 0;
+  }
+  .pub-title {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .pub-name {
+    color: var(--secondary-color);
+    font-style: italic;
+  }
+</style>

@@ -1,13 +1,54 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import Publication from "../components/Publication.astro";
+import pubs from "../assets/pubs.json";
+
+type PublicationEntry = (typeof pubs)[number];
+
+const getDateParts = (pub: PublicationEntry): number[] =>
+  pub.issued?.["date-parts"]?.[0] ?? [];
+
+const sortedPubs = [...pubs].sort((a, b) => {
+  const [ay, am = 1, ad = 1] = getDateParts(a);
+  const [by, bm = 1, bd = 1] = getDateParts(b);
+  return by - ay || bm - am || bd - ad;
+});
+
+const pubsByYear = sortedPubs.reduce<Record<string, PublicationEntry[]>>((acc, pub) => {
+  const [year] = getDateParts(pub);
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(pub);
+  return acc;
+}, {});
+
+const years = Object.keys(pubsByYear)
+  .sort((a, b) => Number(b) - Number(a));
 ---
 
 <PageLayout>
   <h2>Publications</h2>
   <p>
-    This page is currently under construction. In the meantime, see Huy's <a
-      href="https://scholar.google.com/citations?hl=en&user=TgaPukcAAAAJ&view_op=list_works&sortby=pubdate"
-      >Google Scholar page</a
-    > for a list of publications.
+    Our publications are also available on Huy's
+    <a href="https://scholar.google.com/citations?hl=en&user=TgaPukcAAAAJ&view_op=list_works&sortby=pubdate"> Google Scholar page</a>.
   </p>
+  <div class="pubs-container">
+    {years.map((year) => (
+      <div class="pub-year">
+        <h3>{year}</h3>
+        {pubsByYear[year].map((pub) => (
+            <Publication pub={pub} />
+          ))}
+      </div>
+    ))}
+  </div>
 </PageLayout>
+<style>
+  .pubs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+</style>
