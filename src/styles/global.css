@@ -8,9 +8,9 @@
 	/* colors */
   /* https: //brand.illinois.edu/visual-identity/color#hosted-brand-assets-for-web */
   --primary-color: rgb(19, 41, 75);     /* illini blue */
-  --primary-color-dark: rgba(19, 41, 75, 0.8);/* illini blue with 80% opacity */
-  --primary-color-medium: rgba(19, 41, 75, 0.6); /* illini blue with 60% opacity */
-  --primary-color-light: rgba(19, 41, 75, 0.4);  /* illini blue with 40% opacity */
+  --primary-color-dark: rgba(19, 41, 75, 0.8);  /* illini blue with 80% opacity */
+  --primary-color-medium: rgba(19, 41, 75, 0.6);  /* illini blue with 60% opacity */
+  --primary-color-light: rgba(19, 41, 75, 0.4); /* illini blue with 40% opacity */
   --focus-color: #c84113;               /* altgeld orange */
   --focus-color-light: #c84113cc;       /* altgeld orange with 80% opacity */
 	/* --secondary-color: #707372;           /* storm (gray) */
