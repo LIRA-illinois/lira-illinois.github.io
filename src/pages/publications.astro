@@ -21,48 +21,63 @@ const isArxivWithoutContainerTitle = (pub: PublicationEntry): boolean => {
 };
 
 const arxivPubs = sortedPubs.filter(isArxivWithoutContainerTitle);
-const nonArxivPubs = sortedPubs.filter((pub) => !isArxivWithoutContainerTitle(pub));
+const nonArxivPubs = sortedPubs.filter(
+  (pub) => !isArxivWithoutContainerTitle(pub),
+);
 
-const pubsByYear = nonArxivPubs.reduce<Record<string, PublicationEntry[]>>((acc, pub) => {
-  const [year] = getDateParts(pub);
-  if (!acc[year]) {
-    acc[year] = [];
-  }
-  acc[year].push(pub);
-  return acc;
-}, {});
+const pubsByYear = nonArxivPubs.reduce<Record<string, PublicationEntry[]>>(
+  (acc, pub) => {
+    const [year] = getDateParts(pub);
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(pub);
+    return acc;
+  },
+  {},
+);
 
-const years = Object.keys(pubsByYear)
-  .sort((a, b) => Number(b) - Number(a));
+const years = Object.keys(pubsByYear).sort((a, b) => Number(b) - Number(a));
 ---
 
 <PageLayout>
   <h2>Publications</h2>
   <p>
     Our publications are also available on Huy's
-    <a href="https://scholar.google.com/citations?hl=en&user=TgaPukcAAAAJ&view_op=list_works&sortby=pubdate"> Google Scholar page</a>.
+    <a
+      href="https://scholar.google.com/citations?hl=en&user=TgaPukcAAAAJ&view_op=list_works&sortby=pubdate"
+    >
+      Google Scholar page</a
+    >.
   </p>
+  <hr />
   <div class="pubs-container">
-    {arxivPubs.length > 0 && (
-      <div class="pub-year">
-        <h4>Preprints</h4>
-        <div class="year-container">
-          {arxivPubs.map((pub) => (
-            <Publication pub={pub} />
-          ))}
+    {
+      arxivPubs.length > 0 && (
+        <div class="pub-year">
+          <h4>Preprints</h4>
+          <div class="year-container">
+            {arxivPubs.map((pub) => (
+              <Publication pub={pub} />
+            ))}
+          </div>
         </div>
-      </div>
-    )}
-    {years.map((year) => (
-      <div class="pub-year">
-        <h4>{year}</h4>
-        <div class="year-container">
-          {pubsByYear[year].map((pub) => (
-            <Publication pub={pub} />
-          ))}
+        <hr />
+      )
+    }
+    {
+      years.map((year) => (
+        <div class="pub-year">
+          <h4>{year}</h4>
+          <div class="year-container">
+            {pubsByYear[year].map((pub) => (
+              <Publication pub={pub} />
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
+        <hr />
+      ))
+    }
   </div>
 </PageLayout>
 <style>
