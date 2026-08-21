@@ -1,90 +1,97 @@
-@online{akcal2026S2ActSimple,
+@misc{akcal2026,
   title = {{{S2Act}}: {{Simple Spiking Actor}}},
   shorttitle = {{{S2Act}}},
   author = {Akcal, Ugur and Kim, Seung Hyun and Yuasa, Mikihisa and Osooli, Hamid and Sun, Jiarui and Sahu, Ribhav and Gazzola, Mattia and Tran, Huy T. and Chowdhary, Girish},
-  date = {2026-03},
+  year = 2026,
+  month = mar,
+  number = {arXiv:2603.15725},
   eprint = {2603.15725},
-  eprinttype = {arXiv},
-  eprintclass = {cs},
+  primaryclass = {cs},
+  publisher = {arXiv},
   doi = {10.48550/arXiv.2603.15725},
-  abstract = {Spiking neural networks (SNNs) and biologicallyinspired learning mechanisms are attractive in mobile robotics, where the size and performance of onboard neural network policies are constrained by power and computational budgets. Existing SNN approaches, such as population coding, reward modulation, and hybrid artificial neural network (ANN)–SNN architectures, have shown promising results; however, they face challenges in complex, highly stochastic environments due to SNN sensitivity to hyperparameters and inconsistent gradient signals. To address these challenges, we propose simple spiking actor (S2Act), a computationally lightweight framework that deploys an RL policy using an SNN in three steps: (1) architect an actor-critic model based on an approximated network of rate-based spiking neurons, (2) train the network with gradients using compatible activation functions, and (3) transfer the trained weights into physical parameters of rate-based leaky integrate-and-fire (LIF) neurons for inference and deployment. By globally shaping LIF neuron parameters such that their rate-based responses approximate ReLU activations, S2Act effectively mitigates the vanishing gradient problem, while preconstraining LIF response curves reduces reliance on complex SNN-specific hyperparameter tuning. We demonstrate our method in two multi-agent stochastic environments (capturethe-flag and parking) that capture the complexity of multirobot interactions, and deploy our trained policies on physical TurtleBot platforms using Intel’s Loihi neuromorphic hardware. Our experimental results show that S2Act outperforms relevant baselines in task performance and real-time inference in nearly all considered scenarios, highlighting its potential for rapid prototyping and efficient real-world deployment of SNNbased RL policies.},
+  urldate = {2026-04-06},
+  abstract = {Spiking neural networks (SNNs) and biologicallyinspired learning mechanisms are attractive in mobile robotics, where the size and performance of onboard neural network policies are constrained by power and computational budgets. Existing SNN approaches, such as population coding, reward modulation, and hybrid artificial neural network (ANN)--SNN architectures, have shown promising results; however, they face challenges in complex, highly stochastic environments due to SNN sensitivity to hyperparameters and inconsistent gradient signals. To address these challenges, we propose simple spiking actor (S2Act), a computationally lightweight framework that deploys an RL policy using an SNN in three steps: (1) architect an actor-critic model based on an approximated network of rate-based spiking neurons, (2) train the network with gradients using compatible activation functions, and (3) transfer the trained weights into physical parameters of rate-based leaky integrate-and-fire (LIF) neurons for inference and deployment. By globally shaping LIF neuron parameters such that their rate-based responses approximate ReLU activations, S2Act effectively mitigates the vanishing gradient problem, while preconstraining LIF response curves reduces reliance on complex SNN-specific hyperparameter tuning. We demonstrate our method in two multi-agent stochastic environments (capturethe-flag and parking) that capture the complexity of multirobot interactions, and deploy our trained policies on physical TurtleBot platforms using Intel's Loihi neuromorphic hardware. Our experimental results show that S2Act outperforms relevant baselines in task performance and real-time inference in nearly all considered scenarios, highlighting its potential for rapid prototyping and efficient real-world deployment of SNNbased RL policies.},
+  archiveprefix = {arXiv},
   langid = {english},
-  pubstate = {prepublished},
   keywords = {Computer Science - Emerging Technologies,Computer Science - Machine Learning,Computer Science - Multiagent Systems,Computer Science - Robotics},
   file = {/Users/httran/Zotero/storage/D9LD9NKB/Akcal et al. - 2026 - S2Act Simple Spiking Actor.pdf}
 }
 
-@inproceedings{antul2018ScalingModelBased,
+@inproceedings{antul2018,
   title = {Toward {{Scaling Model-Based Engineering}} for {{Systems}} of {{Systems}}},
   booktitle = {2018 {{IEEE Aerospace Conference Proceedings}}},
-  author = {Antul, Laura and Ricks, Sean and Cho, Lance and Cotter, Matt and Jacobs, Ryan B and Markina-Khusid, Aleksandra and Kamenetsky, Janna and Dahmann, Judith and Tran, Huy T},
-  date = {2018-03},
-  location = {Big Sky, MT},
+  author = {Antul, Laura and Ricks, Sean and Cho, Lance and Cotter, Matt and Jacobs, Ryan B and {Markina-Khusid}, Aleksandra and Kamenetsky, Janna and Dahmann, Judith and Tran, Huy T},
+  year = 2018,
+  month = mar,
+  address = {Big Sky, MT},
   doi = {10.1109/AERO.2018.8396427},
   isbn = {978-1-5386-2014-4},
   file = {/Users/httran/Zotero/storage/HBPTRXZJ/Antul et al. - 2018 - Toward Scaling Model-Based Engineering for Systems of Systems.pdf}
 }
 
-@inproceedings{balchanos2014MetricsbasedAnalysis,
+@inproceedings{balchanos2014,
   title = {Metrics-Based {{Analysis}} and {{Evaluation Framework}} for {{Engineering Resilient Systems}}},
   booktitle = {2014 7th {{International Symposium}} on {{Resilient Control Systems}}},
   author = {Balchanos, Michael G and Domercant, Jean Charles and Tran, Huy T and Mavris, Dimitri N},
-  date = {2014-08},
+  year = 2014,
+  month = aug,
   publisher = {IEEE},
-  location = {Denver, CO},
+  address = {Denver, CO},
   doi = {10.1109/ISRCS.2014.6900107},
-  eventtitle = {Resilience {{Week}}},
   file = {/Users/httran/Zotero/storage/5X332CLI/2014-Metrics-based_Analysis_and_Evaluation_Framework_for_Engineering_Resilient_Systems.pdf}
 }
 
-@inproceedings{chandramouleeswaran2018DatadrivenResilience,
-  title = {Data-Driven {{Resilience Quantification}} of the {{US Airline Network}}},
-  booktitle = {2018 {{Annual IEEE International Systems Conference}} ({{SysCon}})},
-  author = {Chandramouleeswaran, Keshav Ram and Tran, Huy T},
-  date = {2018-04},
-  location = {Vancouver, CA},
-  doi = {10.1109/SYSCON.2018.8369602},
-  file = {/Users/httran/Zotero/storage/AICI6H8L/Chandramouleeswaran, Tran - 2018 - Data-driven Resilience Quantification of the US Airline Network (submitted).pdf}
-}
-
-@inproceedings{chandramouleeswaran2018MachineLearning,
+@inproceedings{chandramouleeswaran2018,
   title = {Machine {{Learning Prediction}} of {{Airport Delays}} in the {{US Air Transportation Network}}},
   booktitle = {18th {{AIAA Aviation Technology}}, {{Integration}}, and {{Operations Conference}}},
   author = {Chandramouleeswaran, Keshav Ram and Tran, Huy T},
-  date = {2018-06},
-  location = {Atlanta, GA},
+  year = 2018,
+  month = jun,
+  address = {Atlanta, GA},
   doi = {10.2514/6.2018-3672},
   file = {/Users/httran/Zotero/storage/Y4TUK948/Chandramouleeswaran, Tran - 2018 - Machine Learning Prediction of Airport Delays in the US Air Transportation Network.pdf}
 }
 
-@online{cho2025ContractionActorCritic,
-  title = {Contraction {{Actor-Critic}}: {{Contraction Metric-Guided Reinforcement Learning}} for {{Robust Path Tracking}}},
-  author = {Cho, Minjae and Tsukamoto, Hiroyasu and Tran, Huy T.},
-  date = {2025-05},
-  eprint = {2506.15700},
-  eprinttype = {arXiv},
-  doi = {10.48550/arXiv.2506.15700},
-  pubstate = {prepublished},
-  file = {/Users/httran/Zotero/storage/UWTJD4TE/462_Contraction_Actor_Critic_C.pdf}
+@inproceedings{chandramouleeswaran2018a,
+  title = {Data-Driven {{Resilience Quantification}} of the {{US Airline Network}}},
+  booktitle = {2018 {{Annual IEEE International Systems Conference}} ({{SysCon}})},
+  author = {Chandramouleeswaran, Keshav Ram and Tran, Huy T},
+  year = 2018,
+  month = apr,
+  address = {Vancouver, CA},
+  doi = {10.1109/SYSCON.2018.8369602},
+  file = {/Users/httran/Zotero/storage/AICI6H8L/Chandramouleeswaran, Tran - 2018 - Data-driven Resilience Quantification of the US Airline Network (submitted).pdf}
 }
 
-@online{cho2026,
+@misc{cho2026,
   title = {Intrinsic {{Reward Policy Optimization}} for {{Sparse-Reward Environments}}},
   author = {Cho, Minjae and Tran, Huy T.},
-  date = {2026-01},
+  year = 2026,
+  month = jan,
   number = {arXiv.2601.21391},
-  location = {Seoul, South Korea},
+  publisher = {arXiv},
+  address = {Seoul, South Korea},
   doi = {10.48550/arXiv.2601.21391},
-  pubstate = {prepublished},
   file = {/Users/httran/Zotero/storage/7PSB7TWV/Cho and Tran - 2026 - Intrinsic Reward Policy Optimization for Sparse-Reward Environments.pdf}
 }
 
-@inproceedings{choi2025PathfindersSky,
+@article{cho2026a,
+  title = {Contraction-{{Aware Reinforcement Learning}} for {{Nonlinear Control}} with {{Statistical Robustness}}},
+  author = {Cho, Minjae and Tsukamoto, Hiroyasu and Tran, Huy T.},
+  year = 2026,
+  month = aug,
+  journal = {IEEE Transactions on Robotics},
+  url = {https://arxiv.org/pdf/2506.15700},
+  file = {/Users/httran/Zotero/storage/UWTJD4TE/462_Contraction_Actor_Critic_C.pdf}
+}
+
+@inproceedings{choi2025a,
   title = {Pathfinders in the {{Sky}}: {{Formal Decision-Making Models}} for {{Collaborative Air Traffic Control}} in {{Convective Weather}}},
   booktitle = {2025 {{IEEE Intelligent Transportation Systems Conference}} ({{ITSC}})},
   author = {Choi, Jimin and Anand, Kartikeya and Idris, Husni R. and Tran, Huy T. and Li, Max Z.},
-  date = {2025-11},
-  location = {Gold Coast, Australia},
+  year = 2025,
+  month = nov,
+  address = {Gold Coast, Australia},
   doi = {10.1109/ITSC60802.2025.11423180},
   url = {https://arxiv.org/pdf/2505.01804},
   abstract = {Air traffic can be significantly disrupted by weather. Pathfinder operations involve assigning a designated aircraft to assess whether airspace that was previously impacted by weather can be safely traversed through. Despite relatively routine use in air traffic control, there is little research on the underlying multi-agent decision-making problem. We seek to address this gap herein by formulating decision models to capture the operational dynamics and implications of pathfinders. Specifically, we construct a Markov chain to represent the stochastic transitions between key operational states (e.g., pathfinder selection). We then analyze its steadystate behavior to understand long-term system dynamics. We also propose models to characterize flight-specific acceptance behaviors (based on utility trade-offs) and pathfinder selection strategies (based on sequential offer allocations). We then conduct a worst-case scenario analysis that highlights risks from collective rejection and explores how selfless behavior and uncertainty affect system resilience. Empirical analysis of data from the US Federal Aviation Administration demonstrates the real-world significance of pathfinder operations and informs future model calibration.},
@@ -92,21 +99,23 @@
   file = {/Users/httran/Zotero/storage/44CJA7TC/Choi et al. - Pathfinders in the Sky Formal Decision-Making Models for Collaborative Air Traffic Control in Conve.pdf}
 }
 
-@inproceedings{dimon2022DAnoGANAnomaly,
+@inproceedings{dimon2022,
   title = {D-{{AnoGAN}}: {{Anomaly Detection}} in {{Disconnected Data Manifolds}} with {{Generative Adversarial Networks}}},
   booktitle = {2022 {{International Joint Conference}} on {{Neural Networks}} ({{IJCNN}})},
   author = {Dimon, Walker L and Chase, Nicholas B and Stralen, Neale Van and Nigam, Rupal and Lembeck, Michael F and Tran, Huy T},
-  date = {2022-07},
-  location = {Padua, Italy},
+  year = 2022,
+  month = jul,
+  address = {Padua, Italy},
   doi = {10.1109/IJCNN55064.2022.9892270},
   file = {/Users/httran/Zotero/storage/AHWKUM57/Dimon et al. - 2022 - D-AnoGAN Anomaly Detection in Disconnected Data M.pdf}
 }
 
-@article{gasparino2022WayFASTTraversability,
+@article{gasparino2022,
   title = {{{WayFAST}}: {{Traversability Predictive Navigation}} for {{Field Robots}}},
   author = {Gasparino, Mateus V and Sivakumar, Arun N and Liu, Yixiao and Velasquez, Andres E B and Higuti, Vitor A H and Rogers, John and Tran, Huy and Chowdhary, Girish},
-  date = {2022-10},
-  journaltitle = {IEEE Robotics and Automation Letters},
+  year = 2022,
+  month = oct,
+  journal = {IEEE Robotics and Automation Letters},
   volume = {7},
   number = {4},
   pages = {10651--10658},
@@ -117,24 +126,25 @@
   file = {/Users/httran/Zotero/storage/BVPLPNLW/preprint.pdf;/Users/httran/Zotero/storage/ZQKGVE4U/Gasparino et al. - 2022 - WayFAST Traversability Predictive Navigation for Field Robots.pdf}
 }
 
-@inproceedings{heglund2020RailwayDelay,
+@inproceedings{heglund2020,
   title = {Railway {{Delay Prediction}} with {{Spatial-Temporal Graph Convolutional Networks}}},
   booktitle = {2020 {{IEEE Intelligent Transportation Systems Conference}} ({{ITSC}})},
   author = {Heglund, Jacob S W and Taleongpong, Panukorn and Hu, Simon and Tran, Huy T},
-  date = {2020-09},
+  year = 2020,
+  month = sep,
   pages = {1--6},
-  location = {Rhodes, Greece},
+  address = {Rhodes, Greece},
   doi = {10.1109/ITSC45102.2020.9294742},
   file = {/Users/httran/Zotero/storage/8N9HQ385/Heglund et al. - 2020 - Railway Delay Prediction with Spatial-Temporal Graph Convolutional Networks(2).pdf}
 }
 
-@article{heglund2021SocialSensing,
+@article{heglund2021,
   title = {Social Sensing: Towards Social Media as a Sensor for Resilience in Power Systems and Other Critical Infrastructures},
   author = {Heglund, Jacob and Hopkinson, Kenneth M. and Tran, Huy T.},
-  date = {2021},
-  journaltitle = {Sustainable and Resilient Infrastructure},
+  year = 2021,
+  journal = {Sustainable and Resilient Infrastructure},
   volume = {6},
-  number = {1--2},
+  number = {1-2},
   pages = {94--106},
   publisher = {Taylor \& Francis},
   issn = {2378-9689},
@@ -143,33 +153,37 @@
   file = {/Users/httran/Zotero/storage/ZJAIG4WA/Heglund, Hopkinson, Tran - 2021 - Social sensing towards social media as a sensor for resilience in power systems and other critical (2).pdf}
 }
 
-@inproceedings{heglund2024CoordinationMachines,
+@inproceedings{heglund2024,
   title = {Coordination {{Machines}} for {{Minimizing Communication}} in {{Multi-Agent Reinforcement Learning}}},
   booktitle = {{{RLC}} 2024 {{Workshop CoCoMARL}}},
   author = {Heglund, Jacob and Tran, Huy T.},
-  date = {2024-08},
-  location = {Amherst, MA},
+  year = 2024,
+  month = aug,
+  address = {Amherst, MA},
   url = {https://openreview.net/pdf?id=SnTvlVU7xr},
   abstract = {Multi-agent systems (MAS) are a promising solution for many real-world problems. However, complete and perfect communications are not guaranteed in the real-world. A key problem in MAS is thus ensuring that agents can meet global specifications while minimizing communication cost. We approach this problem by proposing a hierarchical model that decomposes a global, multi-agent task given by a linear temporal logic (LTL) formula into an equivalent automaton defined over subtasks given as LTL formulae. Our key idea is that each subtask may require different levels of inter-agent communication, and that modeling a global task as the composition of subtasks enables context-aware communication. To solve this problem, we formulate a hierarchical agent which solves an optimization problem to ensure an MAS satisfies a probabilistic task-completion specification while minimizing inter-agent communication. We then develop an algorithm to optimize the hierarchical agent based on the performance of a low-level team of agents that are trained to solve subtasks using multi-agent reinforcement learning (MARL). We then compare our approach to a baseline monolithic task model that approximates a common formulation used in MARL, and show our method provides a significant reduction in communication cost compared to the baseline.},
   langid = {english},
   file = {/Users/httran/Zotero/storage/ZUETCKC5/Heglund and Tran - 2024 - Coordination Machines for Minimizing Communi- cation in Multi-Agent Reinforcement Learning.pdf}
 }
 
-@inproceedings{kim2022DisentanglingSuccessor,
+@inproceedings{kim2022,
   title = {Disentangling {{Successor Features}} for {{Coordination}} in {{Multi-agent Reinforcement Learning}}},
   booktitle = {Proc. of the 21st {{International Conference}} on {{Autonomous Agents}} and {{Multiagent Systems}} ({{AAMAS}} 2022)},
   author = {Kim, Seung Hyun and Stralen, Neale Van and Chowdhary, Girish and Tran, Huy T.},
-  date = {2022-05},
-  location = {Online},
-  url = {https://www.ifaamas.org/Proceedings/aamas2022/pdfs/p751.pdf},
+  year = 2022,
+  month = may,
+  address = {Online},
+  doi = {https://dl.acm.org/doi/10.5555/3535850.3535935},
+  url = {https://dl.acm.org/doi/pdf/10.5555/3535850.3535935},
   file = {/Users/httran/Zotero/storage/VMLHBN9W/Kim et al. - 2022 - Disentangling Successor Features for Coordination in Multi-agent Reinforcement Learning.pdf}
 }
 
-@article{markina-khusid2022ComplexNetwork,
+@article{markina-khusid2022,
   title = {A {{Complex Network Framework}} for {{Validated Assessments}} of {{Systems}} of {{Systems Robustness}}},
-  author = {Markina-khusid, Aleksandra and Jacobs, Ryan B and Antul, Laura and Cho, Lance and Tran, Huy T.},
-  date = {2022-03},
-  journaltitle = {IEEE Systems Journal},
+  author = {{Markina-khusid}, Aleksandra and Jacobs, Ryan B and Antul, Laura and Cho, Lance and Tran, Huy T.},
+  year = 2022,
+  month = mar,
+  journal = {IEEE Systems Journal},
   volume = {16},
   number = {1},
   pages = {1092--1102},
@@ -177,11 +191,12 @@
   file = {/Users/httran/Zotero/storage/AFEX8N88/Markina-khusid et al. - 2021 - A Complex Network Framework for Validated Assessments of Systems of Systems Robustness.pdf}
 }
 
-@article{napier2020ArtificialNeural,
+@article{napier2020,
   title = {An {{Artificial Neural Network Approach}} to {{Generating High-Resolution Designs}} from {{Low-Resolution Input}} in {{Topology Optimization}}},
   author = {Napier, Nicholas A. and Sriraman, Sai-Aksharah and Tran, Huy T. and James, Kai A.},
-  date = {2020-01},
-  journaltitle = {Journal of Mechanical Design},
+  year = 2020,
+  month = jan,
+  journal = {Journal of Mechanical Design},
   volume = {142},
   number = {1},
   pages = {011402--011413},
@@ -190,124 +205,148 @@
   file = {/Users/httran/Zotero/storage/4SXTJXKC/Napier et al. - 2019 - An Artificial Neural Network Approach to Generating High-Resolution Designs from Low-Resolution Input in Topol(2).pdf}
 }
 
-@inproceedings{nigam2025SurveyCurrent,
+@inproceedings{nigam2025,
   title = {A {{Survey}} of {{Current Applications}} of {{Inverse Reinforcement Learning}} in {{Aviation}} and {{Future Outlooks}}},
   booktitle = {{{AIAA SciTech}} 2025 {{Forum}}},
   author = {Nigam, Rupal and Choi, Jimin and Parikh, Niket and Li, Max Z. and Tran, Huy T.},
-  date = {2025-01},
-  location = {Orlando, FL},
+  year = 2025,
+  month = jan,
+  address = {Orlando, FL},
   doi = {10.2514/6.2025-1540},
   langid = {english},
   file = {/Users/httran/Zotero/storage/M4BU3BBC/Nigam et al. - A Survey of Current Applications of Inverse Reinforcement Learning in Aviation and Future Outlooks.pdf}
 }
 
-@article{nigam2026SurveyInverse,
+@inproceedings{nigam2026,
+  title = {Zero-{{Shot Coordination}} in {{Ad Hoc Teams}} with {{Generalized Policy Improvement}} and {{Difference Rewards}}},
+  booktitle = {Proc. of the 25th {{International Conference}} on {{Autonomous Agents}} and {{Multiagent Systems}} ({{AAMAS}} 2026)},
+  author = {Nigam, Rupal and Parikh, Niket and Osooli, Hamid and Yuasa, Mikihisa and Heglund, Jacob and Tran, Huy T.},
+  year = 2026,
+  month = may,
+  address = {Paphos, Cyprus},
+  doi = {10.65109/TNEX7143},
+  url = {https://dl.acm.org/doi/pdf/10.65109/TNEX7143},
+  abstract = {Real-world multi-agent systems may require ad hoc teaming, where an agent must coordinate with previously unseen teammates in a zero-shot manner. Prior work either selects a pretrained policy based on an inferred model of the new teammates or pretrains a single policy that is robust to potential teammates. Instead, we propose to dynamically leverage all pretrained policies through two key ideas---generalized policy improvement and difference rewards---for efficient and effective knowledge transfer between different teams. We empirically demonstrate that our algorithm, Generalized Policy improvement for Ad hoc Teaming (GPAT), successfully enables zero-shot transfer to new teams in three simulated environments and demonstrate our algorithm in a real-world multi-robot setting.},
+  langid = {english},
+  file = {/Users/httran/Zotero/storage/SRBWCRNF/Nigam - Zero-Shot Coordination in Ad Hoc Teams with Generalized Policy Improvement and Difference Rewards.pdf}
+}
+
+@article{nigam2026a,
   title = {Survey of {{Inverse Reinforcement Learning}} in {{Aviation}} and {{Future Outlooks}}},
   author = {Nigam, Rupal and Choi, Jimin and Parikh, Niket and Li, Max Z and Tran, Huy T},
-  date = {2026-03},
-  journaltitle = {AIAA Journal of Aerospace Information Systems},
+  year = 2026,
+  month = apr,
+  journal = {AIAA Journal of Aerospace Information Systems},
   volume = {23},
   number = {4},
   pages = {305--321},
   doi = {10.2514/1.I011635},
   url = {https://tran.aerospace.illinois.edu/files/jais-irl.pdf},
   langid = {english},
-  file = {/Users/httran/Zotero/storage/APFG76Z4/Nigam et al. - 2026 - Survey of Inverse Reinforcement Learning in Aviation and Future Outlooks.pdf}
+  file = {/Users/httran/Zotero/storage/MAADQVIV/Nigam et al. - 2026 - Survey of Inverse Reinforcement Learning in Aviation and Future Outlooks.pdf}
 }
 
-@inproceedings{nigam2026ZeroShotCoordination,
-  title = {Zero-{{Shot Coordination}} in {{Ad Hoc Teams}} with {{Generalized Policy Improvement}} and {{Difference Rewards}}},
-  booktitle = {Proc. of the 25th {{International Conference}} on {{Autonomous Agents}} and {{Multiagent Systems}} ({{AAMAS}} 2026)},
-  author = {Nigam, Rupal and Parikh, Niket and Osooli, Hamid and Yuasa, Mikihisa and Heglund, Jacob and Tran, Huy T.},
-  date = {2026-05},
-  location = {Paphos, Cyprus},
-  url = {https://arxiv.org/pdf/2510.16187},
-  abstract = {Real-world multi-agent systems may require ad hoc teaming, where an agent must coordinate with previously unseen teammates in a zero-shot manner. Prior work either selects a pretrained policy based on an inferred model of the new teammates or pretrains a single policy that is robust to potential teammates. Instead, we propose to dynamically leverage all pretrained policies through two key ideas—generalized policy improvement and difference rewards—for efficient and effective knowledge transfer between different teams. We empirically demonstrate that our algorithm, Generalized Policy improvement for Ad hoc Teaming (GPAT), successfully enables zero-shot transfer to new teams in three simulated environments and demonstrate our algorithm in a real-world multi-robot setting.},
-  langid = {english},
-  file = {/Users/httran/Zotero/storage/SRBWCRNF/Nigam - Zero-Shot Coordination in Ad Hoc Teams with Generalized Policy Improvement and Difference Rewards.pdf}
-}
-
-@article{parikh2025a,
-  title = {Context-{{Aware Inefficiency}} of {{Self-Interested Agents}} in {{UAV Wildfire Fighting}}},
-  author = {Parikh, Niket and Nigam, Rupal and Li, Max Z. and Tran, Huy T.},
-  date = {2026-04},
-  journaltitle = {AIAA Journal of Aerospace Information Systems},
-  volume = {23},
-  number = {4},
-  doi = {10.2514/1.I011681},
-  url = {https://tran.aerospace.illinois.edu/files/social-cost.pdf},
-  langid = {english},
-  file = {/Users/httran/Zotero/storage/NIV68K5G/Parikh et al. - 2026 - Context-Aware Inefficiency of Self-Interested Agents in UAV Wildfire Fighting.pdf}
-}
-
-@inproceedings{parikh2025InefficiencySelfInterested,
+@inproceedings{parikh2025,
   title = {Inefficiency of {{Self-Interested Behaviour}} in {{Markov Games}}: {{State-Dependent Price}} of {{Anarchy}}},
   booktitle = {{{AIAA SciTech}} 2025 {{Forum}}},
   author = {Parikh, Niket and Nigam, Rupal and Li, Max Z. and Tran, Huy T.},
-  date = {2025-01},
-  location = {Orlando, FL},
+  year = 2025,
+  month = jan,
+  address = {Orlando, FL},
   doi = {10.2514/6.2025-1929},
   langid = {english},
   file = {/Users/httran/Zotero/storage/AZHDGWC8/Parikh et al. - Inefficiency of Self-Interested Behaviour in Markov Games State-Dependent Price of Anarchy.pdf}
 }
 
-@inproceedings{stralen2020EvaluatingAdaptation,
+@article{parikh2026,
+  title = {Context-{{Aware Inefficiency}} of {{Self-Interested Agents}} in {{UAV Wildfire Fighting}}},
+  author = {Parikh, Niket and Nigam, Rupal and Li, Max Z. and Tran, Huy T.},
+  year = 2026,
+  month = apr,
+  journal = {AIAA Journal of Aerospace Information Systems},
+  volume = {23},
+  number = {4},
+  pages = {346--358},
+  doi = {10.2514/1.I011681},
+  url = {https://tran.aerospace.illinois.edu/files/social-cost.pdf},
+  langid = {english},
+  file = {/Users/httran/Zotero/storage/43JQZV8E/Parikh et al. - 2026 - Context-Aware Inefficiency of Self-Interested Agents in UAV Wildfire Fighting.pdf}
+}
+
+@inproceedings{stralen2020,
   title = {Evaluating {{Adaptation Performance}} of {{Hierarchical Deep Reinforcement Learning}}},
   booktitle = {2020 {{IEEE International Conference}} on {{Robotics}} and {{Automation}} ({{ICRA}})},
   author = {Stralen, Neale Van and Kim, Seung Hyun and Tran, Huy and Chowdhary, Girish},
-  date = {2020-05},
-  location = {Paris, France},
+  year = 2020,
+  month = may,
+  address = {Paris, France},
   doi = {10.1109/ICRA40945.2020.9197052},
   file = {/Users/httran/Zotero/storage/GYWBCC68/Stralen et al. - 2020 - Evaluating Adaptation Performance of Hierarchical Deep Reinforcement Learning(2).pdf}
 }
 
-@inproceedings{stralen2022FeatureSpecialization,
+@inproceedings{stralen2022,
   title = {Feature {{Specialization}} and {{Clustering Improves Hierarchical Sub-task Learning}}},
   booktitle = {Proc. of the {{Adaptive}} and {{Learning Agents Workshop}} ({{ALA}} 2022)},
   author = {Stralen, Neale Van and Kim, Seung and Tran, Huy T. and Chowdhary, Girish},
-  date = {2022-05},
-  location = {Online},
-  url = {https://ala2022.github.io/papers/ALA2022_paper_41.pdf},
+  year = 2022,
+  month = may,
+  address = {Online},
+  url = {https://ala2022.github.io/papers/ALA2022\_paper\_41.pdf},
   file = {/Users/httran/Zotero/storage/C94VB765/Stralen et al. - 2022 - Feature Specialization and Clustering Improves Hie.pdf}
 }
 
-@inproceedings{thompson2018ApplicationDefenderAttackerDefender,
+@inproceedings{thompson2018,
   title = {Application of a {{Defender-Attacker-Defender Model}} to the {{U}}.{{S}}. {{Air Transportation Network}}},
   booktitle = {2018 {{IEEE International Symposium}} on {{Technologies}} for {{Homeland Security}} ({{HST}})},
   author = {Thompson, Karl H and Tran, Huy T},
-  date = {2018-10},
+  year = 2018,
+  month = oct,
   pages = {1--5},
-  location = {Woburn, MA},
+  address = {Woburn, MA},
   doi = {10.1109/THS.2018.8574199},
   file = {/Users/httran/Zotero/storage/QIKD363D/Thompson, Tran - 2018 - Application of a Defender-Attacker-Defender Model to the U.S. Air Transportation Network.pdf}
 }
 
-@article{thompson2020OperationalPerspectives,
+@article{thompson2020,
   title = {Operational {{Perspectives}} into the {{Resilience}} of the {{US Air Transportation Network Against Intelligent Attacks}}},
   author = {Thompson, Karl H and Tran, Huy T},
-  date = {2020-04},
-  journaltitle = {IEEE Transactions on Intelligent Transportation Systems},
+  year = 2020,
+  month = apr,
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
   volume = {21},
   number = {4},
   doi = {10.1109/TITS.2019.2909177},
   file = {/Users/httran/Zotero/storage/YRLFBCJ5/Thompson, Tran - 2020 - Operational Perspectives into the Resilience of the US Air Transportation Network Against Intelligent Attacks(2).pdf}
 }
 
-@inproceedings{tran2014TradeoffsCommand,
+@inproceedings{tran2014,
   title = {Trade-Offs {{Between Command}} and {{Control Architectures}} and {{Force Capabilities Using Battlespace Awareness}}},
   booktitle = {19th {{International Command}} and {{Control Research}} and {{Technology Symposium}}},
   author = {Tran, Huy T and Domercant, Jean Charles and Mavris, Dimitri},
-  date = {2014},
-  location = {Alexandria, VA},
-  url = {http://dodccrp.org/events/19th_iccrts_2014/track_chair/papers/058.pdf},
+  year = 2014,
+  month = jun,
+  address = {Alexandria, VA},
+  url = {http://dodccrp.org/events/19th\_iccrts\_2014/track\_chair/papers/058.pdf},
   file = {/Users/httran/Zotero/storage/CITSVHFJ/2014-Trade-offs_Between_Command_and_Control_Architectures_and_Force_Capabilities_Using_Battlespace_Awareness.pdf}
 }
 
-@article{tran2015EvaluatingAgility,
+@inproceedings{tran2015a,
+  title = {A {{System-of-Systems Approach}} for {{Assessing}} the {{Resilience}} of {{Reconfigurable Command}} and {{Control Networks}}},
+  booktitle = {{{AIAA Infotech}} @ {{Aerospace}}},
+  author = {Tran, Huy T and Domercant, Jean Charles and Mavris, Dimitri N},
+  year = 2015,
+  month = jan,
+  address = {Kissimmee, FL},
+  doi = {10.2514/6.2015-0640},
+  file = {/Users/httran/Zotero/storage/J5B7EUDU/2015-A_System-of-Systems_Approach_for_Assessing_the_Resilience_of_Reconfigurable_Command_and_Control_Networks.pdf}
+}
+
+@article{tran2015b,
   title = {Evaluating the Agility of Adaptive Command and Control Networks from a Cyber Complex Adaptive Systems Perspective},
-  author = {Tran, H. T. and Domercant, J. C. and Mavris, D. N.},
-  date = {2015-07},
-  journaltitle = {The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology},
+  author = {Tran, Huy T and Domercant, Jean C and Mavris, Dimitri N},
+  year = 2015,
+  month = jul,
+  journal = {The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology},
   volume = {12},
   number = {4},
   pages = {405--422},
@@ -318,59 +357,52 @@
   file = {/Users/httran/Zotero/storage/4YAXBKYY/Tran, Domercant, Mavris - 2015 - Evaluating the agility of adaptive command and control networks from a cyber complex adaptive systems p.pdf}
 }
 
-@inproceedings{tran2015SystemofSystemsApproach,
-  title = {A {{System-of-Systems Approach}} for {{Assessing}} the {{Resilience}} of {{Reconfigurable Command}} and {{Control Networks}}},
-  booktitle = {{{AIAA Infotech}} @ {{Aerospace}}},
-  author = {Tran, Huy T and Domercant, Jean Charles and Mavris, Dimitri N},
-  date = {2015-01},
-  location = {Kissimmee, FL},
-  doi = {10.2514/6.2015-0640},
-  eventtitle = {{{AIAA SciTech}}},
-  file = {/Users/httran/Zotero/storage/J5B7EUDU/2015-A_System-of-Systems_Approach_for_Assessing_the_Resilience_of_Reconfigurable_Command_and_Control_Networks.pdf}
-}
-
-@inproceedings{tran2016NetworkbasedCost,
+@inproceedings{tran2016,
   title = {A {{Network-based Cost Comparison}} of {{Resilient}} and {{Robust System-of-Systems}}},
   booktitle = {Complex {{Adaptive Systems Conference}}},
-  author = {Tran, Huy T. and Domerçant, Jean Charles and Mavris, Dimitri N.},
-  date = {2016-11},
+  author = {Tran, Huy T. and Domer{\c c}ant, Jean Charles and Mavris, Dimitri N.},
+  year = 2016,
+  month = nov,
   volume = {95},
   pages = {126--133},
   publisher = {Elsevier Masson SAS},
+  address = {Los Angelos, CA},
   issn = {18770509},
   doi = {10.1016/j.procs.2016.09.302},
   isbn = {1-4048-9465-9},
   file = {/Users/httran/Zotero/storage/Q4WVAGKK/2016-A_Network-based_Cost_Comparison_of_Resilient_and_Robust_System-of-Systems.pdf}
 }
 
-@inproceedings{tran2017DesigningResilient,
+@inproceedings{tran2017,
   title = {Designing {{Resilient System-of-Systems Networks}}},
   booktitle = {2017 11th {{Annual IEEE International Systems Conference}} ({{SysCon}})},
   author = {Tran, Huy T and Domercant, Jean Charles and Mavris, Dimitri N},
-  date = {2017-04},
+  year = 2017,
+  month = apr,
   pages = {1--6},
-  location = {Montreal, Quebec},
+  address = {Montreal, Quebec},
   doi = {10.1109/SYSCON.2017.7934813},
-  eventtitle = {{{SysCon}}},
   file = {/Users/httran/Zotero/storage/FT97KYBB/Tran, Domercant, Mavris - 2017 - Designing Resilient System-of-Systems Networks.pdf}
 }
 
-@article{tran2017FrameworkQuantitative,
+@article{tran2017a,
   title = {A Framework for the Quantitative Assessment of Performance-Based System Resilience},
   author = {Tran, Huy T and Balchanos, Michael and Domercant, Jean Charles and Mavris, Dimitri N},
-  date = {2017-02},
-  journaltitle = {Reliability Engineering and System Safety},
+  year = 2017,
+  month = feb,
+  journal = {Reliability Engineering and System Safety},
   volume = {158},
   pages = {73--84},
   doi = {10.1016/j.ress.2016.10.014},
   file = {/Users/httran/Zotero/storage/7PGSHF8J/2017-A_framework_for_the_quantitative_assessment_of_performance-based_system_resilience.pdf}
 }
 
-@article{tran2019ParametricDesign,
+@article{tran2019,
   title = {Parametric {{Design}} of {{Resilient Complex Networked Systems}}},
   author = {Tran, Huy T and Domerc, Jean Charles and Mavris, Dimitri N},
-  date = {2019-06},
-  journaltitle = {IEEE Systems Journal},
+  year = 2019,
+  month = jun,
+  journal = {IEEE Systems Journal},
   volume = {13},
   number = {2},
   pages = {1496--1504},
@@ -378,60 +410,64 @@
   file = {/Users/httran/Zotero/storage/6QEFRN2B/Tran, Domerc, Mavris - 2019 - Parametric Design of Resilient Complex Networked Systems.pdf}
 }
 
-@article{wong2020DatadrivenAnalysis,
+@article{wong2020,
   title = {Data-Driven {{Analysis}} of {{Resilience}} in {{Airline Networks}}},
   author = {Wong, Allen and Tan, Sijian and Chandramouleeswaran, Keshav Ram and Tran, Huy T},
-  date = {2020-11},
-  journaltitle = {Transportation Research Part E: Logistics and Transportation Review},
+  year = 2020,
+  month = nov,
+  journal = {Transportation Research Part E: Logistics and Transportation Review},
   volume = {143},
   doi = {10.1016/j.tre.2020.102068},
   keywords = {air transportation,anomaly detection,data analytics,network theory,resilience},
   file = {/Users/httran/Zotero/storage/DLC89E2I/Wong et al. - 2020 - Data-driven Analysis of Resilience in Airline Networks(2).pdf}
 }
 
-@inproceedings{wu2026SFODNavSuccessor,
+@inproceedings{wu2026,
   title = {{{SF-ODNav}}: {{Successor Feature Framework}} for {{Map-less Target-Driven Outdoor Visual Navigation}}},
   booktitle = {2026 {{IEEE International Conference}} on {{Robotics}} and {{Automation}} ({{ICRA}})},
   author = {Wu, Junzhe and Zhang, Jiaming and Zhang, Tingrong and Tao, Ruining and Tran, Huy T. and Chowdhary, Girish},
-  date = {2026-06},
-  location = {Vienna, Austria},
-  abstract = {Traditional deep reinforcement learning-based visual navigation techniques face challenges in dynamic and unstructured outdoor environments, particularly in the absence of high-resolution maps and GPS signals. This paper presents a deep reinforcement learning-based approach for target-driven visual navigation without explicit localization and mapping in outdoor settings, using the successor feature (SF) framework to enhance the model’s transfer learning. This design enables effective knowledge transfer across tasks, allowing the model to adapt to novel environments with zero-shot or few-shot fine-tuning. To facilitate training and evaluation, we design grid-world environments constructed from real-world outdoor images, providing realistic yet controlled conditions for developing and testing deep reinforcement learning-based navigation. Experimental results demonstrate that our method can adapt effectively in outdoor environments, both within the same domain and across different domains. Moreover, despite being trained in a discrete grid-world setting, the model is successfully deployed in real time within the same area, maintaining robust performance and highlighting its strong transferability to continuous, real-world conditions.},
+  year = 2026,
+  month = jun,
+  address = {Vienna, Austria},
+  abstract = {Traditional deep reinforcement learning-based visual navigation techniques face challenges in dynamic and unstructured outdoor environments, particularly in the absence of high-resolution maps and GPS signals. This paper presents a deep reinforcement learning-based approach for target-driven visual navigation without explicit localization and mapping in outdoor settings, using the successor feature (SF) framework to enhance the model's transfer learning. This design enables effective knowledge transfer across tasks, allowing the model to adapt to novel environments with zero-shot or few-shot fine-tuning. To facilitate training and evaluation, we design grid-world environments constructed from real-world outdoor images, providing realistic yet controlled conditions for developing and testing deep reinforcement learning-based navigation. Experimental results demonstrate that our method can adapt effectively in outdoor environments, both within the same domain and across different domains. Moreover, despite being trained in a discrete grid-world setting, the model is successfully deployed in real time within the same area, maintaining robust performance and highlighting its strong transferability to continuous, real-world conditions.},
   langid = {english},
   file = {/Users/httran/Zotero/storage/XVVRZSDZ/SF-ODNav Successor Feature Framework for Map-less Target-Driven Outdoor Visual Navigation.pdf}
 }
 
-@article{yuasa2024GeneratingExplanations,
+@article{yuasa2024,
   title = {On {{Generating Explanations}} for {{Reinforcement Learning Policies}}: {{An Empirical Study}}},
   shorttitle = {On {{Generating Explanations}} for {{Reinforcement Learning Policies}}},
   author = {Yuasa, Mikihisa and Tran, Huy T. and Sreenivas, Ramavarapu S.},
-  date = {2024-12},
-  journaltitle = {IEEE Control Systems Letters},
-  shortjournal = {IEEE Control Syst. Lett.},
+  year = 2024,
+  month = dec,
+  journal = {IEEE Control Systems Letters},
   volume = {8},
   pages = {3027--3032},
   issn = {2475-1456},
   doi = {10.1109/LCSYS.2024.3519301},
   url = {https://arxiv.org/abs/2309.16960},
   urldate = {2025-01-06},
-  abstract = {Explaining reinforcement learning policies is important for deploying them in real-world scenarios. We introduce a set of linear temporal logic formulae designed to provide such explanations, and an algorithm for searching through those formulae for the one that best explains a given policy. Our key idea is to compare action distributions from the target policy with those from policies optimized for candidate explanations. This comparison provides more insight into the target policy than existing methods and avoids inference of “catch-all” explanations. We demonstrate our method in a simulated game of capture-the-flag, a car-parking environment, and a robot navigation task.},
+  abstract = {Explaining reinforcement learning policies is important for deploying them in real-world scenarios. We introduce a set of linear temporal logic formulae designed to provide such explanations, and an algorithm for searching through those formulae for the one that best explains a given policy. Our key idea is to compare action distributions from the target policy with those from policies optimized for candidate explanations. This comparison provides more insight into the target policy than existing methods and avoids inference of ``catch-all'' explanations. We demonstrate our method in a simulated game of capture-the-flag, a car-parking environment, and a robot navigation task.},
+  copyright = {https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html},
   langid = {english},
   file = {/Users/httran/Zotero/storage/2AC2RTWV/Yuasa et al. - 2024 - On Generating Explanations for Reinforcement Learning Policies An Empirical Study.pdf}
 }
 
-@article{yuasa2026NeuroSymbolicGeneration,
+@article{yuasa2026,
   title = {Neuro-{{Symbolic Generation}} of {{Explanations}} for {{Robot Policies}} with {{Weighted Signal Temporal Logic}}},
   author = {Yuasa, Mikihisa and Sreenivas, Ramavarapu S. and Tran, Huy T.},
-  date = {2026-04},
-  journaltitle = {IEEE Robotics and Automation Letters},
+  year = 2026,
+  month = apr,
+  journal = {IEEE Robotics and Automation Letters},
   volume = {11},
   number = {4},
   eprint = {2504.21841},
-  eprinttype = {arXiv},
-  eprintclass = {cs},
+  primaryclass = {cs},
   doi = {10.1109/LRA.2026.3662977},
   url = {https://arxiv.org/pdf/2504.21841},
   urldate = {2025-05-29},
-  abstract = {Neural network-based policies have demonstrated success in many robotic applications, but often lack humanexplanability, which poses challenges in safety-critical deployments. To address this, we propose a neuro-symbolic explanation framework that generates a weighted signal temporal logic (wSTL) specification to describe a robot policy in a interpretable form. Existing methods typically produce explanations that are verbose and inconsistent, which hinders explainability, and loose, which do not give meaningful insights into the underlying policy. We address these issues by introducing a simplification process consisting of predicate filtering, regularization, and iterative pruning. We also introduce three novel explainability evaluation metrics—conciseness, consistency, and strictness—to assess explanation quality beyond conventional classification metrics. Our method is validated in three simulated robotic environments, where it outperforms baselines in generating concise, consistent, and strict wSTL explanations without sacrificing classification accuracy. This work bridges neural network policy learning with formal methods, contributing to safer and more transparent decision-making in robotics.},
+  abstract = {Neural network-based policies have demonstrated success in many robotic applications, but often lack humanexplanability, which poses challenges in safety-critical deployments. To address this, we propose a neuro-symbolic explanation framework that generates a weighted signal temporal logic (wSTL) specification to describe a robot policy in a interpretable form. Existing methods typically produce explanations that are verbose and inconsistent, which hinders explainability, and loose, which do not give meaningful insights into the underlying policy. We address these issues by introducing a simplification process consisting of predicate filtering, regularization, and iterative pruning. We also introduce three novel explainability evaluation metrics---conciseness, consistency, and strictness---to assess explanation quality beyond conventional classification metrics. Our method is validated in three simulated robotic environments, where it outperforms baselines in generating concise, consistent, and strict wSTL explanations without sacrificing classification accuracy. This work bridges neural network policy learning with formal methods, contributing to safer and more transparent decision-making in robotics.},
+  archiveprefix = {arXiv},
   langid = {english},
   keywords = {Computer Science - Formal Languages and Automata Theory,Computer Science - Robotics},
   file = {/Users/httran/Zotero/storage/3ZRHMMDZ/Neuro-Symbolic_Generation_of_Explanations_for_Robot_Policies_With_Weighted_Signal_Temporal_Logic.pdf}

@@ -1,11 +1,12 @@
 ---
-title: "Contraction Actor-Critic: Contraction Metric-Guided Reinforcement Learning for Robust Path Tracking"
-date: 2025-05-28
+title: "Contraction-Aware Reinforcement Learning for Nonlinear Control with Statistical Robustness"
+# date: 2025-05-28
+date: 2026-08-21
 imageUrl: '/src/assets/research/carl.gif'
 imageAlt: "A robot following a reference trajectory."
 # funding: "ONR N00014-20-1-2249"
 # fundingSlugs: ["onr.png"]
-citation: "arXiv'25"
+citation: "T-RO'26"
 projects: ["explainable-verifiable-learning"]
 paperUrl: '/files/carl.pdf'
 ---

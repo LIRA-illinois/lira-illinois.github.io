@@ -3,6 +3,15 @@
     "DOI": "10.48550/arXiv.2603.15725",
     "URL": "https://arxiv.org/abs/2603.15725",
     "abstract": "Spiking neural networks (SNNs) and biologicallyinspired learning mechanisms are attractive in mobile robotics, where the size and performance of onboard neural network policies are constrained by power and computational budgets. Existing SNN approaches, such as population coding, reward modulation, and hybrid artificial neural network (ANN)–SNN architectures, have shown promising results; however, they face challenges in complex, highly stochastic environments due to SNN sensitivity to hyperparameters and inconsistent gradient signals. To address these challenges, we propose simple spiking actor (S2Act), a computationally lightweight framework that deploys an RL policy using an SNN in three steps: (1) architect an actor-critic model based on an approximated network of rate-based spiking neurons, (2) train the network with gradients using compatible activation functions, and (3) transfer the trained weights into physical parameters of rate-based leaky integrate-and-fire (LIF) neurons for inference and deployment. By globally shaping LIF neuron parameters such that their rate-based responses approximate ReLU activations, S2Act effectively mitigates the vanishing gradient problem, while preconstraining LIF response curves reduces reliance on complex SNN-specific hyperparameter tuning. We demonstrate our method in two multi-agent stochastic environments (capturethe-flag and parking) that capture the complexity of multirobot interactions, and deploy our trained policies on physical TurtleBot platforms using Intel’s Loihi neuromorphic hardware. Our experimental results show that S2Act outperforms relevant baselines in task performance and real-time inference in nearly all considered scenarios, highlighting its potential for rapid prototyping and efficient real-world deployment of SNNbased RL policies.",
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          6
+        ]
+      ]
+    },
     "author": [
       {
         "family": "Akcal",
@@ -41,7 +50,7 @@
         "given": "Girish"
       }
     ],
-    "id": "akcal2026S2ActSimple",
+    "id": "akcal2026",
     "issued": {
       "date-parts": [
         [
@@ -52,10 +61,11 @@
     },
     "keyword": "Computer Science - Emerging Technologies,Computer Science - Machine Learning,Computer Science - Multiagent Systems,Computer Science - Robotics",
     "language": "en-US",
-    "status": "pre-published",
+    "number": "arXiv:2603.15725",
+    "publisher": "arXiv",
     "title": "S2Act: Simple Spiking Actor",
     "title-short": "S2Act",
-    "type": "webpage"
+    "type": ""
   },
   {
     "DOI": "10.1109/AERO.2018.8396427",
@@ -99,7 +109,7 @@
       }
     ],
     "container-title": "2018 IEEE Aerospace Conference Proceedings",
-    "id": "antul2018ScalingModelBased",
+    "id": "antul2018",
     "issued": {
       "date-parts": [
         [
@@ -133,8 +143,7 @@
       }
     ],
     "container-title": "2014 7th International Symposium on Resilient Control Systems",
-    "event": "Resilience Week",
-    "id": "balchanos2014MetricsbasedAnalysis",
+    "id": "balchanos2014",
     "issued": {
       "date-parts": [
         [
@@ -146,32 +155,6 @@
     "publisher": "IEEE",
     "publisher-place": "Denver, CO",
     "title": "Metrics-based Analysis and Evaluation Framework for Engineering Resilient Systems",
-    "type": "paper-conference"
-  },
-  {
-    "DOI": "10.1109/SYSCON.2018.8369602",
-    "author": [
-      {
-        "family": "Chandramouleeswaran",
-        "given": "Keshav Ram"
-      },
-      {
-        "family": "Tran",
-        "given": "Huy T"
-      }
-    ],
-    "container-title": "2018 Annual IEEE International Systems Conference (SysCon)",
-    "id": "chandramouleeswaran2018DatadrivenResilience",
-    "issued": {
-      "date-parts": [
-        [
-          2018,
-          4
-        ]
-      ]
-    },
-    "publisher-place": "Vancouver, CA",
-    "title": "Data-driven Resilience Quantification of the US Airline Network",
     "type": "paper-conference"
   },
   {
@@ -187,7 +170,7 @@
       }
     ],
     "container-title": "18th AIAA Aviation Technology, Integration, and Operations Conference",
-    "id": "chandramouleeswaran2018MachineLearning",
+    "id": "chandramouleeswaran2018",
     "issued": {
       "date-parts": [
         [
@@ -201,35 +184,30 @@
     "type": "paper-conference"
   },
   {
-    "DOI": "10.48550/arXiv.2506.15700",
-    "URL": "https://arxiv.org/abs/2506.15700",
+    "DOI": "10.1109/SYSCON.2018.8369602",
     "author": [
       {
-        "family": "Cho",
-        "given": "Minjae"
-      },
-      {
-        "family": "Tsukamoto",
-        "given": "Hiroyasu"
+        "family": "Chandramouleeswaran",
+        "given": "Keshav Ram"
       },
       {
         "family": "Tran",
-        "given": "Huy T."
+        "given": "Huy T"
       }
     ],
-    "id": "cho2025ContractionActorCritic",
+    "container-title": "2018 Annual IEEE International Systems Conference (SysCon)",
+    "id": "chandramouleeswaran2018a",
     "issued": {
       "date-parts": [
         [
-          2025,
-          5
+          2018,
+          4
         ]
       ]
     },
-    "status": "pre-published",
-    "title": "Contraction Actor-Critic: Contraction Metric-Guided Reinforcement Learning for Robust Path Tracking",
-    "title-short": "Contraction Actor-Critic",
-    "type": "webpage"
+    "publisher-place": "Vancouver, CA",
+    "title": "Data-driven Resilience Quantification of the US Airline Network",
+    "type": "paper-conference"
   },
   {
     "DOI": "10.48550/arXiv.2601.21391",
@@ -253,10 +231,39 @@
       ]
     },
     "number": "arXiv.2601.21391",
+    "publisher": "arXiv",
     "publisher-place": "Seoul, South Korea",
-    "status": "pre-published",
     "title": "Intrinsic Reward Policy Optimization for Sparse-Reward Environments",
-    "type": "webpage"
+    "type": ""
+  },
+  {
+    "URL": "https://arxiv.org/pdf/2506.15700",
+    "author": [
+      {
+        "family": "Cho",
+        "given": "Minjae"
+      },
+      {
+        "family": "Tsukamoto",
+        "given": "Hiroyasu"
+      },
+      {
+        "family": "Tran",
+        "given": "Huy T."
+      }
+    ],
+    "container-title": "IEEE Transactions on Robotics",
+    "id": "cho2026a",
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8
+        ]
+      ]
+    },
+    "title": "Contraction-Aware Reinforcement Learning for Nonlinear Control with Statistical Robustness",
+    "type": "article-journal"
   },
   {
     "DOI": "10.1109/ITSC60802.2025.11423180",
@@ -285,7 +292,7 @@
       }
     ],
     "container-title": "2025 IEEE Intelligent Transportation Systems Conference (ITSC)",
-    "id": "choi2025PathfindersSky",
+    "id": "choi2025a",
     "issued": {
       "date-parts": [
         [
@@ -329,7 +336,7 @@
       }
     ],
     "container-title": "2022 International Joint Conference on Neural Networks (IJCNN)",
-    "id": "dimon2022DAnoGANAnomaly",
+    "id": "dimon2022",
     "issued": {
       "date-parts": [
         [
@@ -382,7 +389,7 @@
       }
     ],
     "container-title": "IEEE Robotics and Automation Letters",
-    "id": "gasparino2022WayFASTTraversability",
+    "id": "gasparino2022",
     "issue": "4",
     "issued": {
       "date-parts": [
@@ -420,7 +427,7 @@
       }
     ],
     "container-title": "2020 IEEE Intelligent Transportation Systems Conference (ITSC)",
-    "id": "heglund2020RailwayDelay",
+    "id": "heglund2020",
     "issued": {
       "date-parts": [
         [
@@ -452,8 +459,8 @@
       }
     ],
     "container-title": "Sustainable and Resilient Infrastructure",
-    "id": "heglund2021SocialSensing",
-    "issue": "1–2",
+    "id": "heglund2021",
+    "issue": "1-2",
     "issued": {
       "date-parts": [
         [
@@ -483,7 +490,7 @@
       }
     ],
     "container-title": "RLC 2024 Workshop CoCoMARL",
-    "id": "heglund2024CoordinationMachines",
+    "id": "heglund2024",
     "issued": {
       "date-parts": [
         [
@@ -498,7 +505,8 @@
     "type": "paper-conference"
   },
   {
-    "URL": "https://www.ifaamas.org/Proceedings/aamas2022/pdfs/p751.pdf",
+    "DOI": "https://dl.acm.org/doi/10.5555/3535850.3535935",
+    "URL": "https://dl.acm.org/doi/pdf/10.5555/3535850.3535935",
     "author": [
       {
         "family": "Kim",
@@ -518,7 +526,7 @@
       }
     ],
     "container-title": "Proc. Of the 21st International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2022)",
-    "id": "kim2022DisentanglingSuccessor",
+    "id": "kim2022",
     "issued": {
       "date-parts": [
         [
@@ -556,7 +564,7 @@
       }
     ],
     "container-title": "IEEE Systems Journal",
-    "id": "markina-khusid2022ComplexNetwork",
+    "id": "markina-khusid2022",
     "issue": "1",
     "issued": {
       "date-parts": [
@@ -593,7 +601,7 @@
       }
     ],
     "container-title": "Journal of Mechanical Design",
-    "id": "napier2020ArtificialNeural",
+    "id": "napier2020",
     "issue": "1",
     "issued": {
       "date-parts": [
@@ -633,7 +641,7 @@
       }
     ],
     "container-title": "AIAA SciTech 2025 Forum",
-    "id": "nigam2025SurveyCurrent",
+    "id": "nigam2025",
     "issued": {
       "date-parts": [
         [
@@ -648,49 +656,8 @@
     "type": "paper-conference"
   },
   {
-    "DOI": "10.2514/1.I011635",
-    "URL": "https://tran.aerospace.illinois.edu/files/jais-irl.pdf",
-    "author": [
-      {
-        "family": "Nigam",
-        "given": "Rupal"
-      },
-      {
-        "family": "Choi",
-        "given": "Jimin"
-      },
-      {
-        "family": "Parikh",
-        "given": "Niket"
-      },
-      {
-        "family": "Li",
-        "given": "Max Z"
-      },
-      {
-        "family": "Tran",
-        "given": "Huy T"
-      }
-    ],
-    "container-title": "AIAA Journal of Aerospace Information Systems",
-    "id": "nigam2026SurveyInverse",
-    "issue": "4",
-    "issued": {
-      "date-parts": [
-        [
-          2026,
-          3
-        ]
-      ]
-    },
-    "language": "en-US",
-    "page": "305-321",
-    "title": "Survey of Inverse Reinforcement Learning in Aviation and Future Outlooks",
-    "type": "article-journal",
-    "volume": "23"
-  },
-  {
-    "URL": "https://arxiv.org/pdf/2510.16187",
+    "DOI": "10.65109/TNEX7143",
+    "URL": "https://dl.acm.org/doi/pdf/10.65109/TNEX7143",
     "abstract": "Real-world multi-agent systems may require ad hoc teaming, where an agent must coordinate with previously unseen teammates in a zero-shot manner. Prior work either selects a pretrained policy based on an inferred model of the new teammates or pretrains a single policy that is robust to potential teammates. Instead, we propose to dynamically leverage all pretrained policies through two key ideas—generalized policy improvement and difference rewards—for efficient and effective knowledge transfer between different teams. We empirically demonstrate that our algorithm, Generalized Policy improvement for Ad hoc Teaming (GPAT), successfully enables zero-shot transfer to new teams in three simulated environments and demonstrate our algorithm in a real-world multi-robot setting.",
     "author": [
       {
@@ -719,7 +686,7 @@
       }
     ],
     "container-title": "Proc. Of the 25th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2026)",
-    "id": "nigam2026ZeroShotCoordination",
+    "id": "nigam2026",
     "issued": {
       "date-parts": [
         [
@@ -734,28 +701,32 @@
     "type": "paper-conference"
   },
   {
-    "DOI": "10.2514/1.I011681",
-    "URL": "https://tran.aerospace.illinois.edu/files/social-cost.pdf",
+    "DOI": "10.2514/1.I011635",
+    "URL": "https://tran.aerospace.illinois.edu/files/jais-irl.pdf",
     "author": [
-      {
-        "family": "Parikh",
-        "given": "Niket"
-      },
       {
         "family": "Nigam",
         "given": "Rupal"
       },
       {
+        "family": "Choi",
+        "given": "Jimin"
+      },
+      {
+        "family": "Parikh",
+        "given": "Niket"
+      },
+      {
         "family": "Li",
-        "given": "Max Z."
+        "given": "Max Z"
       },
       {
         "family": "Tran",
-        "given": "Huy T."
+        "given": "Huy T"
       }
     ],
     "container-title": "AIAA Journal of Aerospace Information Systems",
-    "id": "parikh2025a",
+    "id": "nigam2026a",
     "issue": "4",
     "issued": {
       "date-parts": [
@@ -766,7 +737,8 @@
       ]
     },
     "language": "en-US",
-    "title": "Context-Aware Inefficiency of Self-Interested Agents in UAV Wildfire Fighting",
+    "page": "305-321",
+    "title": "Survey of Inverse Reinforcement Learning in Aviation and Future Outlooks",
     "type": "article-journal",
     "volume": "23"
   },
@@ -791,7 +763,7 @@
       }
     ],
     "container-title": "AIAA SciTech 2025 Forum",
-    "id": "parikh2025InefficiencySelfInterested",
+    "id": "parikh2025",
     "issued": {
       "date-parts": [
         [
@@ -805,6 +777,44 @@
     "title": "Inefficiency of Self-Interested Behaviour in Markov Games: State-Dependent Price of Anarchy",
     "title-short": "Inefficiency of Self-Interested Behaviour in Markov Games",
     "type": "paper-conference"
+  },
+  {
+    "DOI": "10.2514/1.I011681",
+    "URL": "https://tran.aerospace.illinois.edu/files/social-cost.pdf",
+    "author": [
+      {
+        "family": "Parikh",
+        "given": "Niket"
+      },
+      {
+        "family": "Nigam",
+        "given": "Rupal"
+      },
+      {
+        "family": "Li",
+        "given": "Max Z."
+      },
+      {
+        "family": "Tran",
+        "given": "Huy T."
+      }
+    ],
+    "container-title": "AIAA Journal of Aerospace Information Systems",
+    "id": "parikh2026",
+    "issue": "4",
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4
+        ]
+      ]
+    },
+    "language": "en-US",
+    "page": "346-358",
+    "title": "Context-Aware Inefficiency of Self-Interested Agents in UAV Wildfire Fighting",
+    "type": "article-journal",
+    "volume": "23"
   },
   {
     "DOI": "10.1109/ICRA40945.2020.9197052",
@@ -827,7 +837,7 @@
       }
     ],
     "container-title": "2020 IEEE International Conference on Robotics and Automation (ICRA)",
-    "id": "stralen2020EvaluatingAdaptation",
+    "id": "stralen2020",
     "issued": {
       "date-parts": [
         [
@@ -841,7 +851,7 @@
     "type": "paper-conference"
   },
   {
-    "URL": "https://ala2022.github.io/papers/ALA2022_paper_41.pdf",
+    "URL": "https://ala2022.github.io/papers/ALA2022\\_paper\\_41.pdf",
     "author": [
       {
         "family": "Stralen",
@@ -861,7 +871,7 @@
       }
     ],
     "container-title": "Proc. Of the Adaptive and Learning Agents Workshop (ALA 2022)",
-    "id": "stralen2022FeatureSpecialization",
+    "id": "stralen2022",
     "issued": {
       "date-parts": [
         [
@@ -887,7 +897,7 @@
       }
     ],
     "container-title": "2018 IEEE International Symposium on Technologies for Homeland Security (HST)",
-    "id": "thompson2018ApplicationDefenderAttackerDefender",
+    "id": "thompson2018",
     "issued": {
       "date-parts": [
         [
@@ -914,7 +924,7 @@
       }
     ],
     "container-title": "IEEE Transactions on Intelligent Transportation Systems",
-    "id": "thompson2020OperationalPerspectives",
+    "id": "thompson2020",
     "issue": "4",
     "issued": {
       "date-parts": [
@@ -929,7 +939,7 @@
     "volume": "21"
   },
   {
-    "URL": "http://dodccrp.org/events/19th_iccrts_2014/track_chair/papers/058.pdf",
+    "URL": "http://dodccrp.org/events/19th\\_iccrts\\_2014/track\\_chair/papers/058.pdf",
     "author": [
       {
         "family": "Tran",
@@ -945,52 +955,18 @@
       }
     ],
     "container-title": "19th International Command and Control Research and Technology Symposium",
-    "id": "tran2014TradeoffsCommand",
+    "id": "tran2014",
     "issued": {
       "date-parts": [
         [
-          2014
+          2014,
+          6
         ]
       ]
     },
     "publisher-place": "Alexandria, VA",
     "title": "Trade-offs Between Command and Control Architectures and Force Capabilities Using Battlespace Awareness",
     "type": "paper-conference"
-  },
-  {
-    "DOI": "10.1177/1548512915592517",
-    "ISBN": "1548512915",
-    "ISSN": "1548-5129",
-    "author": [
-      {
-        "family": "Tran",
-        "given": "H. T."
-      },
-      {
-        "family": "Domercant",
-        "given": "J. C."
-      },
-      {
-        "family": "Mavris",
-        "given": "D. N."
-      }
-    ],
-    "container-title": "The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology",
-    "id": "tran2015EvaluatingAgility",
-    "issue": "4",
-    "issued": {
-      "date-parts": [
-        [
-          2015,
-          7
-        ]
-      ]
-    },
-    "keyword": "agent-based modeling,agility,c2,c4isr,command and control,complex networks,cyber complex adaptive systems",
-    "page": "405-422",
-    "title": "Evaluating the agility of adaptive command and control networks from a cyber complex adaptive systems perspective",
-    "type": "article-journal",
-    "volume": "12"
   },
   {
     "DOI": "10.2514/6.2015-0640",
@@ -1009,8 +985,7 @@
       }
     ],
     "container-title": "AIAA Infotech @ Aerospace",
-    "event": "AIAA SciTech",
-    "id": "tran2015SystemofSystemsApproach",
+    "id": "tran2015a",
     "issued": {
       "date-parts": [
         [
@@ -1022,6 +997,41 @@
     "publisher-place": "Kissimmee, FL",
     "title": "A System-of-Systems Approach for Assessing the Resilience of Reconfigurable Command and Control Networks",
     "type": "paper-conference"
+  },
+  {
+    "DOI": "10.1177/1548512915592517",
+    "ISBN": "1548512915",
+    "ISSN": "1548-5129",
+    "author": [
+      {
+        "family": "Tran",
+        "given": "Huy T"
+      },
+      {
+        "family": "Domercant",
+        "given": "Jean C"
+      },
+      {
+        "family": "Mavris",
+        "given": "Dimitri N"
+      }
+    ],
+    "container-title": "The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology",
+    "id": "tran2015b",
+    "issue": "4",
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          7
+        ]
+      ]
+    },
+    "keyword": "agent-based modeling,agility,c2,c4isr,command and control,complex networks,cyber complex adaptive systems",
+    "page": "405-422",
+    "title": "Evaluating the agility of adaptive command and control networks from a cyber complex adaptive systems perspective",
+    "type": "article-journal",
+    "volume": "12"
   },
   {
     "DOI": "10.1016/j.procs.2016.09.302",
@@ -1042,7 +1052,7 @@
       }
     ],
     "container-title": "Complex Adaptive Systems Conference",
-    "id": "tran2016NetworkbasedCost",
+    "id": "tran2016",
     "issued": {
       "date-parts": [
         [
@@ -1053,6 +1063,7 @@
     },
     "page": "126-133",
     "publisher": "Elsevier Masson SAS",
+    "publisher-place": "Los Angelos, CA",
     "title": "A Network-based Cost Comparison of Resilient and Robust System-of-Systems",
     "type": "paper-conference",
     "volume": "95"
@@ -1074,8 +1085,7 @@
       }
     ],
     "container-title": "2017 11th Annual IEEE International Systems Conference (SysCon)",
-    "event": "SysCon",
-    "id": "tran2017DesigningResilient",
+    "id": "tran2017",
     "issued": {
       "date-parts": [
         [
@@ -1110,7 +1120,7 @@
       }
     ],
     "container-title": "Reliability Engineering and System Safety",
-    "id": "tran2017FrameworkQuantitative",
+    "id": "tran2017a",
     "issued": {
       "date-parts": [
         [
@@ -1141,7 +1151,7 @@
       }
     ],
     "container-title": "IEEE Systems Journal",
-    "id": "tran2019ParametricDesign",
+    "id": "tran2019",
     "issue": "2",
     "issued": {
       "date-parts": [
@@ -1177,7 +1187,7 @@
       }
     ],
     "container-title": "Transportation Research Part E: Logistics and Transportation Review",
-    "id": "wong2020DatadrivenAnalysis",
+    "id": "wong2020",
     "issued": {
       "date-parts": [
         [
@@ -1220,7 +1230,7 @@
       }
     ],
     "container-title": "2026 IEEE International Conference on Robotics and Automation (ICRA)",
-    "id": "wu2026SFODNavSuccessor",
+    "id": "wu2026",
     "issued": {
       "date-parts": [
         [
@@ -1264,8 +1274,7 @@
       }
     ],
     "container-title": "IEEE Control Systems Letters",
-    "container-title-short": "IEEE Control Syst. Lett.",
-    "id": "yuasa2024GeneratingExplanations",
+    "id": "yuasa2024",
     "issued": {
       "date-parts": [
         [
@@ -1309,7 +1318,7 @@
       }
     ],
     "container-title": "IEEE Robotics and Automation Letters",
-    "id": "yuasa2026NeuroSymbolicGeneration",
+    "id": "yuasa2026",
     "issue": "4",
     "issued": {
       "date-parts": [
