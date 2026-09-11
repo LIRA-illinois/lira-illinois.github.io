@@ -1,5 +1,5 @@
 ---
-title: "Our paper on pathfinder operations was accepted to ITCS 2025!"
+title: "Our paper on pathfinder operations was accepted to ITSC 2025!"
 date: 2025-07-01
 ---
 
