@@ -8,7 +8,7 @@ imageAlt: "A robot following a reference trajectory."
 # fundingSlugs: ["onr.png"]
 citation: "T-RO'26"
 projects: ["explainable-verifiable-learning"]
-paperUrl: '/files/carl.pdf'
+paperUrl: 'https://doi.org/10.1109/TRO.2026.3727138'
 ---
 
 <!-- <figure-full-caption>

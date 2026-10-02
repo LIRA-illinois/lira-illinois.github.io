@@ -7,7 +7,7 @@ funding: "ONR N00014-20-1-2249"
 fundingSlugs: ["onr.png"]
 citation: "RA-L'26"
 projects: ["explainable-verifiable-learning"]
-paperUrl: '/files/tl-nn.pdf'
+paperUrl: 'https://doi.org/10.1109/LRA.2026.3662977'
 ---
 
 <!-- <figure-full-caption>
